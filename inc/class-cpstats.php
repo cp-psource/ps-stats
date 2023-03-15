@@ -73,7 +73,7 @@ class CPStats {
 			add_action( 'delete_blog', array( 'CPStats_Uninstall', 'init_site' ) );
 			add_action( 'wp_dashboard_setup', array( 'CPStats_Dashboard', 'init' ) );
 			add_filter( 'plugin_row_meta', array( 'CPStats_Backend', 'add_meta_link' ), 10, 2 );
-			add_filter( 'plugin_action_links_' . STATIFY_BASE, array( 'CPStats_Backend', 'add_action_link' ) );
+			add_filter( 'plugin_action_links_' . CPSTATS_BASE, array( 'CPStats_Backend', 'add_action_link' ) );
 			add_action( 'admin_init', array( 'CPStats_Settings', 'register_settings' ) );
 			add_action( 'admin_menu', array( 'CPStats_Settings', 'add_admin_menu' ) );
 			add_action( 'update_option_cpstats', array( 'CPStats_Settings', 'action_update_options' ), 10, 2 );

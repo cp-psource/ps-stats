@@ -339,8 +339,8 @@ class CPStats_Settings {
 	 */
 	public static function add_admin_menu() {
 		add_options_page(
-			__( 'CPStats', 'cpstats' ),
-			__( 'CPStats', 'cpstats' ),
+			__( 'CP-Stats', 'cpstats' ),
+			__( 'CP-Stats', 'cpstats' ),
 			'manage_options',
 			'cpstats-settings',
 			array( __CLASS__, 'create_settings_page' )

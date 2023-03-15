@@ -388,9 +388,9 @@ class CPStats_Frontend extends CPStats {
 
 		wp_enqueue_script(
 			'cpstats-js',
-			plugins_url( 'js/snippet.min.js', STATIFY_FILE ),
+			plugins_url( 'js/snippet.min.js', CPSTATS_FILE ),
 			array(),
-			STATIFY_VERSION,
+			CPSTATS_VERSION,
 			true
 		);
 

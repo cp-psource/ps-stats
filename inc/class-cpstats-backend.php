@@ -32,7 +32,7 @@ class CPStats_Backend {
 	public static function add_meta_link( $input, $file ) {
 
 		// Other plugins?
-		if ( STATIFY_BASE !== $file ) {
+		if ( CPSTATS_BASE !== $file ) {
 			return $input;
 		}
 

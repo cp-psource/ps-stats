@@ -23,10 +23,10 @@ defined( 'ABSPATH' ) || exit;
 
 
 /*  Constants */
-define( 'STATIFY_FILE', __FILE__ );
-define( 'STATIFY_DIR', dirname( __FILE__ ) );
-define( 'STATIFY_BASE', plugin_basename( __FILE__ ) );
-define( 'STATIFY_VERSION', '1.8.4' );
+define( 'CPSTATS_FILE', __FILE__ );
+define( 'CPSTATS_DIR', dirname( __FILE__ ) );
+define( 'CPSTATS_BASE', plugin_basename( __FILE__ ) );
+define( 'CPSTATS_VERSION', '1.8.4' );
 
 
 /* Hooks */
@@ -38,21 +38,21 @@ add_action(
 	)
 );
 register_activation_hook(
-	STATIFY_FILE,
+	CPSTATS_FILE,
 	array(
 		'CPStats_Install',
 		'init',
 	)
 );
 register_deactivation_hook(
-	STATIFY_FILE,
+	CPSTATS_FILE,
 	array(
 		'CPStats_Deactivate',
 		'init',
 	)
 );
 register_uninstall_hook(
-	STATIFY_FILE,
+	CPSTATS_FILE,
 	array(
 		'CPStats_Uninstall',
 		'init',
@@ -87,8 +87,20 @@ function cpstats_autoload( $class ) {
 	if ( in_array( $class, $plugin_classes, true ) ) {
 		require_once sprintf(
 			'%s/inc/class-%s.php',
-			STATIFY_DIR,
+			CPSTATS_DIR,
 			strtolower( str_replace( '_', '-', $class ) )
 		);
 	}
 }
+
+// Load cpstats-widget plugin
+function load_cpstats_widget() {
+	require_once( plugin_dir_path( __FILE__ ) . 'inc/cpstats-widget/cpstats-widget.php' );
+}
+add_action( 'plugins_loaded', 'load_cpstats_widget' );
+
+// Load cpstats-blacklist plugin
+function load_cpstats_blacklist() {
+	require_once( plugin_dir_path( __FILE__ ) . 'inc/cpstats-blacklist/cpstats-blacklist.php' );
+}
+add_action( 'plugins_loaded', 'load_cpstats_blacklist' );

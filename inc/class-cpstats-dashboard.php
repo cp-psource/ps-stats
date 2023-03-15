@@ -49,7 +49,7 @@ class CPStats_Dashboard extends CPStats {
 		load_plugin_textdomain(
 			'cpstats',
 			false,
-			wp_normalize_path( sprintf( '%s/lang', STATIFY_DIR ) )
+			wp_normalize_path( sprintf( '%s/lang', CPSTATS_DIR ) )
 		);
 
 		// Plugin version.
@@ -58,7 +58,7 @@ class CPStats_Dashboard extends CPStats {
 		// Add dashboard widget.
 		wp_add_dashboard_widget(
 			'cpstats_dashboard',
-			'CPStats',
+			'CP-Stats',
 			array( __CLASS__, 'print_frontview' ),
 			$can_edit ? array( __CLASS__, 'print_backview' ) : null
 		);
@@ -81,19 +81,19 @@ class CPStats_Dashboard extends CPStats {
 		// Register CSS.
 		wp_register_style(
 			'chartist_css',
-			plugins_url( '/css/chartist.min.css', STATIFY_FILE ),
+			plugins_url( '/css/chartist.min.css', CPSTATS_FILE ),
 			array(),
 			self::$_plugin_version
 		);
 		wp_register_style(
 			'chartist_tooltip_css',
-			plugins_url( '/css/chartist-plugin-tooltip.min.css', STATIFY_FILE ),
+			plugins_url( '/css/chartist-plugin-tooltip.min.css', CPSTATS_FILE ),
 			array(),
 			self::$_plugin_version
 		);
 		wp_register_style(
 			'cpstats',
-			plugins_url( '/css/dashboard.min.css', STATIFY_FILE ),
+			plugins_url( '/css/dashboard.min.css', CPSTATS_FILE ),
 			array(),
 			self::$_plugin_version
 		);
@@ -115,14 +115,14 @@ class CPStats_Dashboard extends CPStats {
 		// Register JS.
 		wp_register_script(
 			'chartist_js',
-			plugins_url( 'js/chartist.min.js', STATIFY_FILE ),
+			plugins_url( 'js/chartist.min.js', CPSTATS_FILE ),
 			array(),
 			self::$_plugin_version,
 			true
 		);
 		wp_register_script(
 			'chartist_tooltip_js',
-			plugins_url( 'js/chartist-plugin-tooltip.min.js', STATIFY_FILE ),
+			plugins_url( 'js/chartist-plugin-tooltip.min.js', CPSTATS_FILE ),
 			array( 'chartist_js' ),
 			self::$_plugin_version,
 			true
@@ -131,7 +131,7 @@ class CPStats_Dashboard extends CPStats {
 			'cpstats_chart_js',
 			plugins_url(
 				'js/dashboard.min.js',
-				STATIFY_FILE
+				CPSTATS_FILE
 			),
 			array( 'jquery', 'chartist_tooltip_js' ),
 			self::$_plugin_version,
@@ -164,7 +164,7 @@ class CPStats_Dashboard extends CPStats {
 
 		// Load template.
 		load_template(
-			wp_normalize_path( sprintf( '%s/views/widget-front.php', STATIFY_DIR ) )
+			wp_normalize_path( sprintf( '%s/views/widget-front.php', CPSTATS_DIR ) )
 		);
 	}
 
@@ -191,7 +191,7 @@ class CPStats_Dashboard extends CPStats {
 
 		// Load view.
 		load_template(
-			wp_normalize_path( sprintf( '%s/views/widget-back.php', STATIFY_DIR ) )
+			wp_normalize_path( sprintf( '%s/views/widget-back.php', CPSTATS_DIR ) )
 		);
 	}
 
@@ -252,7 +252,7 @@ class CPStats_Dashboard extends CPStats {
 	private static function _get_version() {
 
 		// Get plugin meta.
-		$meta = get_plugin_data( STATIFY_FILE );
+		$meta = get_plugin_data( CPSTATS_FILE );
 
 		self::$_plugin_version = $meta['Version'];
 	}

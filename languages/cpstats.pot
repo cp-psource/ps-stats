@@ -1,0 +1,241 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CP-Stats\n"
+"POT-Creation-Date: 2023-03-15 12:43+0100\n"
+"PO-Revision-Date: 2023-03-15 12:43+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: cp-stats.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: inc/class-cpstats-backend.php:42 inc/class-cpstats-settings.php:369
+#: views/widget-back.php:50
+msgid "Donate"
+msgstr ""
+
+#: inc/class-cpstats-backend.php:43 inc/class-cpstats-settings.php:370
+#: views/widget-back.php:51
+msgid "https://wordpress.org/support/plugin/cpstats"
+msgstr ""
+
+#: inc/class-cpstats-backend.php:43 inc/class-cpstats-settings.php:370
+#: views/widget-back.php:51
+msgid "Support"
+msgstr ""
+
+#: inc/class-cpstats-backend.php:76
+msgid "Settings"
+msgstr ""
+
+#: inc/class-cpstats-dashboard.php:146
+msgid "Pageview"
+msgstr ""
+
+#: inc/class-cpstats-dashboard.php:147
+msgid "Pageviews"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:32
+msgid "Global settings"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:38
+msgid "Period of data saving"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:46
+msgid "Tracking method"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:56
+msgid "Dashboard Widget"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:62 views/widget-back.php:30
+msgid "Period of data display in Dashboard"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:70 views/widget-back.php:35
+msgid "Number of entries in top lists"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:78
+msgid "Top lists only for today"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:86 views/widget-back.php:43
+msgid "Show totals"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:96
+msgid "Skip tracking for ..."
+msgstr ""
+
+#: inc/class-cpstats-settings.php:102
+msgid "Disallowed referrers"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:110
+msgid "Logged in users"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:126 inc/class-cpstats-settings.php:188
+#: views/widget-back.php:29
+msgid "days"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:127 inc/class-cpstats-settings.php:189
+#: inc/class-cpstats-settings.php:201 inc/class-cpstats-settings.php:213
+#: inc/class-cpstats-settings.php:225 inc/class-cpstats-settings.php:250
+#: inc/class-cpstats-settings.php:263
+msgid "Default"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:139
+msgid "Default tracking"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:141
+msgid "JavaScript based tracking with nonce check"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:143
+msgid "JavaScript based tracking without nonce check"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:146
+msgid ""
+"JavaScript based tracking is strongly recommended if caching or AMP is in "
+"use."
+msgstr ""
+
+#: inc/class-cpstats-settings.php:147
+msgid ""
+"Disable the nonce check if the caching time is longer than the nonce time or "
+"you miss views due to 403 Forbidden errors."
+msgstr ""
+
+#: inc/class-cpstats-settings.php:175
+msgid "The following options affect the admin dashboard widget."
+msgstr ""
+
+#: inc/class-cpstats-settings.php:213 inc/class-cpstats-settings.php:225
+#: inc/class-cpstats-settings.php:250
+msgid "No"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:237
+msgid ""
+"The following options define cases in which a view will <strong>not</strong> "
+"be tracked."
+msgstr ""
+
+#: inc/class-cpstats-settings.php:251
+msgid ""
+"Enabling this option excludes any views with referrers listed in the list of "
+"disallowed comment keys."
+msgstr ""
+
+#: inc/class-cpstats-settings.php:263
+msgid "Yes"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:264
+msgid ""
+"Enabling this option excludes any views of logged-in users from tracking."
+msgstr ""
+
+#: inc/class-cpstats-settings.php:342 inc/class-cpstats-settings.php:343
+msgid "CPStats"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:359
+msgid "CPStats Settings"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:368
+msgid "https://wordpress.org/plugins/cpstats/"
+msgstr ""
+
+#: inc/class-cpstats-settings.php:368 views/widget-back.php:49
+msgid "Documentation"
+msgstr ""
+
+#: views/widget-back.php:16
+msgid "Open full settings page"
+msgstr ""
+
+#: views/widget-back.php:18
+msgid "All Settings"
+msgstr ""
+
+#: views/widget-back.php:24
+msgid "Widget Settings"
+msgstr ""
+
+#: views/widget-back.php:39
+msgid "Entries in top lists only for today"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#: views/widget-back.php:49
+msgid "https://cpstats.pluginkollektiv.org/"
+msgstr ""
+
+#: views/widget-front.php:20
+msgid "No data available."
+msgstr ""
+
+#: views/widget-front.php:38
+msgid "Top referers"
+msgstr ""
+
+#: views/widget-front.php:63
+msgid "Top targets"
+msgstr ""
+
+#: views/widget-front.php:88
+msgid "Totals"
+msgstr ""
+
+#: views/widget-front.php:97
+msgid "today"
+msgstr ""
+
+#: views/widget-front.php:105
+msgid "since"
+msgstr ""
+
+#: views/widget-front.php:116
+msgid "Refresh"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "CP-Stats"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Compact, easy-to-use and privacy-compliant stats plugin for ClassicPress."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "pluginkollektiv"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://pluginkollektiv.org/"
+msgstr ""

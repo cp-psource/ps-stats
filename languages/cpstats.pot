@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CP-Stats\n"
-"POT-Creation-Date: 2023-03-15 12:43+0100\n"
-"PO-Revision-Date: 2023-03-15 12:43+0100\n"
+"POT-Creation-Date: 2023-03-15 18:48+0100\n"
+"PO-Revision-Date: 2023-03-15 18:42+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,7 @@ msgid "Support"
 msgstr ""
 
 #: inc/class-cpstats-backend.php:76
+#: inc/cpstats-blacklist/inc/class-cpstatsblacklist-admin.php:212
 msgid "Settings"
 msgstr ""
 
@@ -158,8 +159,9 @@ msgid ""
 "Enabling this option excludes any views of logged-in users from tracking."
 msgstr ""
 
+#. Plugin Name of the plugin/theme
 #: inc/class-cpstats-settings.php:342 inc/class-cpstats-settings.php:343
-msgid "CPStats"
+msgid "CP-Stats"
 msgstr ""
 
 #: inc/class-cpstats-settings.php:359
@@ -172,6 +174,615 @@ msgstr ""
 
 #: inc/class-cpstats-settings.php:368 views/widget-back.php:49
 msgid "Documentation"
+msgstr ""
+
+#. translators: minimum version numbers for ClassicPress and PHP inserted at placeholders
+#: inc/cpstats-blacklist/cpstats-blacklist.php:102
+#, php-format
+msgid "CPStats Filter requires at least ClassicPress %1$s and PHP %2$s."
+msgstr ""
+
+#. translators: current version numbers for ClassicPress and PHP inserted at placeholders
+#: inc/cpstats-blacklist/cpstats-blacklist.php:109
+#, php-format
+msgid ""
+"Your site is running ClassicPress %1$s on PHP %2$s, thus the plugin has been "
+"disabled."
+msgstr ""
+
+#: inc/cpstats-blacklist/inc/class-cpstatsblacklist-admin.php:140
+msgid "CP-Stats Filter"
+msgstr ""
+
+#: inc/cpstats-blacklist/inc/class-cpstatsblacklist-admin.php:229
+#: inc/cpstats-blacklist/views/settings-page.php:24
+msgid "Are you sure you want to do this?"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:152
+msgid "Some URLs are invalid and have been sanitized."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:155
+msgid "Some regular expressions are invalid:"
+msgstr ""
+
+#. translators: List of invalid IP addresses (comma separated).
+#: inc/cpstats-blacklist/views/settings-page.php:159
+#, php-format
+msgid "Some IPs are invalid: %s"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:162
+msgid "Settings updated successfully."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:176
+msgid "CPStats Filter"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:180
+msgid "CPStats plugin is not active."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:189
+msgid "Settings have not been saved yet."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:200
+#: inc/cpstats-blacklist/views/settings-page.php:262
+msgid "Referer filter"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:207
+#: inc/cpstats-blacklist/views/settings-page.php:287
+#: inc/cpstats-blacklist/views/settings-page.php:369
+#: inc/cpstats-blacklist/views/settings-page.php:411
+msgid "Activate live filter"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:215
+#: inc/cpstats-blacklist/views/settings-page.php:295
+#: inc/cpstats-blacklist/views/settings-page.php:376
+#: inc/cpstats-blacklist/views/settings-page.php:418
+msgid "Filter at time of tracking, before anything is stored"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:222
+#: inc/cpstats-blacklist/views/settings-page.php:302
+msgid "CronJob execution"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:228
+msgid "Periodically clean up database in background"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:233
+#: inc/cpstats-blacklist/views/settings-page.php:316
+#: inc/cpstats-blacklist/views/settings-page.php:426
+msgid "Matching method"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:238
+#: inc/cpstats-blacklist/views/settings-page.php:252
+msgid "Domain"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:241
+#: inc/cpstats-blacklist/views/settings-page.php:254
+#: inc/cpstats-blacklist/views/settings-page.php:434
+#: inc/cpstats-blacklist/views/settings-page.php:447
+msgid "Keyword"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:244
+#: inc/cpstats-blacklist/views/settings-page.php:325
+#: inc/cpstats-blacklist/views/settings-page.php:437
+msgid "RegEx case-sensitive"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:247
+#: inc/cpstats-blacklist/views/settings-page.php:328
+#: inc/cpstats-blacklist/views/settings-page.php:440
+msgid "RegEx case-insensitive"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:252
+msgid "Match given domain including subdomains"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:254
+#: inc/cpstats-blacklist/views/settings-page.php:447
+msgid "Match every referer that contains one of the keywords"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:256
+#: inc/cpstats-blacklist/views/settings-page.php:335
+#: inc/cpstats-blacklist/views/settings-page.php:449
+msgid "RegEx"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:256
+msgid "Match referer by regular expression"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:273
+msgid "Add one domain (without subdomains) each line, e.g. example.com"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:280
+#: inc/cpstats-blacklist/views/settings-page.php:342
+msgid "Target filter"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:309
+msgid "Clean database periodically in background"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:322
+#: inc/cpstats-blacklist/views/settings-page.php:333
+#: inc/cpstats-blacklist/views/settings-page.php:431
+#: inc/cpstats-blacklist/views/settings-page.php:445
+msgid "Exact"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:333
+msgid "Match only given targets"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:335
+msgid "Match target by regular expression"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:355
+msgid "Add one target URL each line, e.g."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:362
+#: inc/cpstats-blacklist/views/settings-page.php:384
+msgid "IP filter"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:378
+msgid ""
+"Cron execution is not possible for IP filter, because IP addresses are not "
+"stored."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:396
+msgid "Add one IP address or range per line, e.g."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:404
+#: inc/cpstats-blacklist/views/settings-page.php:455
+msgid "User agent filter"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:420
+msgid ""
+"Cron execution is not possible for user agent filter, because the user agent "
+"is stored."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:445
+msgid "Match only given user agents"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:449
+msgid "Match user agent by regular expression"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:467
+msgid "Add one user agent string per line, e.g."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:476
+msgid "Save Changes"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:479
+msgid "CleanUp Database"
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:483
+msgid ""
+"Applies referer and target filter (even if disabled) to data stored in "
+"database."
+msgstr ""
+
+#: inc/cpstats-blacklist/views/settings-page.php:484
+msgid "This cannot be undone!"
+msgstr ""
+
+#: inc/cpstats-widget/CPStats_Posts.class.php:74
+msgid "Frontpage"
+msgstr ""
+
+#: inc/cpstats-widget/CPStats_Posts.class.php:176
+#: inc/cpstats-widget/CPStats_Posts.class.php:196
+msgid "views"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:21
+msgid "Shows the most popular content. Based on CP-Stats Plugin."
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:24
+msgid "CP-Stats Widget"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:43
+msgid "%VIEWS% views"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:55
+msgid "Widget title:"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:60
+msgid "Post type:"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:62
+msgid "posts + pages"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:72
+msgid "Post category:"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:84
+msgid "Last "
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:86
+msgid " days. (If enough stats exists)"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:87
+msgid "0 days = show all items"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:90
+msgid "Amounts:"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:97
+msgid "Show view counter?"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:100
+msgid "Custom text:"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:103
+msgid "%VIEWS% = amount of views"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:133
+msgid "There are no posts yet."
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:173
+msgid "%VIEWS%"
+msgstr ""
+
+#: inc/cpstats-widget/cpstats-widget.php:198
+msgid ""
+"Please install <a target=\"_blank\" href=\"http://wordpress.org/plugins/"
+"cpstats/\">CPStats</a> plugin first."
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:30
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:69
+msgid ""
+"CP-Stats – Extended Evaluation requires the plugin CP-Stats which has to be "
+"installed and activated! Please install and activate CP-Stats before "
+"activating this plugin!"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:35
+msgid "Activation Error: CP-Stats – Extended Evaluation requires CP-Stats!"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:126
+msgid "View"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:127
+#: inc/extended-evaluation-for-cpstats/views/content.php:126
+#: inc/extended-evaluation-for-cpstats/views/content.php:198
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:107
+msgid "Views"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:176
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:187
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:196
+#: inc/extended-evaluation-for-cpstats/views/content.php:43
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:41
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:49
+msgid "CPStats – Extended Evaluation"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:186
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:188
+#: inc/extended-evaluation-for-cpstats/views/content.php:44
+msgid "Content"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:195
+#: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:197
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:43
+msgid "Referrers"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:20
+msgid "Export"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:48
+msgid ""
+"Restrict date period: Please enter start and end date in the YYYY-MM-DD "
+"format"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:49
+msgid "Date range"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:51
+msgid "default (all the time)"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:52
+msgid "last year"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:53
+msgid "last week"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:54
+msgid "yesterday"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:55
+#: views/widget-front.php:97
+msgid "today"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:56
+msgid "this week"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:57
+msgid "last 28 days"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:58
+msgid "last month"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:59
+msgid "this month"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:60
+msgid "this year"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:61
+msgid "1st quarter"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:62
+msgid "2nd quarter"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:63
+msgid "3rd quarter"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:64
+msgid "4th quarter"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:65
+msgid "custom"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:67
+msgid "Start date"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:70
+msgid "End date"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:73
+msgid "Select date period"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:86
+#: inc/extended-evaluation-for-cpstats/views/content.php:123
+msgid "Post/Page"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:140
+msgid "from"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:141
+msgid "to"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:231
+msgid "all posts"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:234
+msgid "Home Page"
+msgstr ""
+
+#. translators: 1: post type 2: post title or URL.
+#: inc/extended-evaluation-for-cpstats/inc/formatting.php:271
+#, php-format
+msgid "for %1$s %2$s"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/content.php:37
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:34
+msgid ""
+"No valid date period set. Please enter a valid start and a valid end date!"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/content.php:50
+msgid "Popular Content and Post Types"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/content.php:53
+#: inc/extended-evaluation-for-cpstats/views/content.php:71
+#: inc/extended-evaluation-for-cpstats/views/content.php:91
+#: inc/extended-evaluation-for-cpstats/views/content.php:114
+msgid "Most Popular Content"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/content.php:80
+#: inc/extended-evaluation-for-cpstats/views/content.php:184
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:68
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:66
+#: views/widget-front.php:20
+msgid "No data available."
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/content.php:124
+#: inc/extended-evaluation-for-cpstats/views/content.php:197
+msgid "URL"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/content.php:125
+msgid "Post Type"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/content.php:127
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:108
+msgid "Proportion"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/content.php:151
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:120
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:212
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:128
+msgid "Sum"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:43
+msgid "Overview and Years"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:45
+msgid "Overview"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:54
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:60
+msgid ""
+"Per default the views of all posts are shown. To restrict the evaluation to "
+"one post/page, enter their path or name."
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:56
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:62
+msgid "Select post/page"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:63
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:74
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:153
+msgid "Monthly Views"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:79
+msgid "Yearly Views"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:107
+msgid "Monthly / Yearly Views"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:116
+msgid "Year"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:140
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:148
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:187
+msgid "Daily Views"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:218
+msgid "Average"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:224
+msgid "Minimum"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/dashboard.php:234
+msgid "Maximum"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:50
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:77
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:96
+msgid "Referrers from other websites"
+msgstr ""
+
+#: inc/extended-evaluation-for-cpstats/views/referrers.php:106
+msgid "Referring Domain"
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:56
+msgid "View details"
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:79
+#, php-format
+msgid "Weitere Informationen zu %s"
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:130
+msgid "Auf neuere Version prüfen"
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:217
+#, php-format
+msgctxt "the plugin title"
+msgid "Keine neuere Version von %s im PSOURCE REPO gefunden."
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:219
+#, php-format
+msgctxt "the plugin title"
+msgid "Im PSOURCE REPO ist eine <b>neuere Version von %s</b> verfügbar!."
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:221
+#, php-format
+msgctxt "the plugin title"
+msgid ""
+"Entschuldige, es konnte nicht festgestellt werden, ob Updates für %s "
+"verfügbar sind."
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:227
+#, php-format
+msgid "Unbekannter PSOURCE-UPDATTER-Status \"%s\""
+msgstr ""
+
+#: psource/psource-plugin-update/Puc/v5p0/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
 msgstr ""
 
 #: views/widget-back.php:16
@@ -190,13 +801,8 @@ msgstr ""
 msgid "Entries in top lists only for today"
 msgstr ""
 
-#. Plugin URI of the plugin/theme
 #: views/widget-back.php:49
 msgid "https://cpstats.pluginkollektiv.org/"
-msgstr ""
-
-#: views/widget-front.php:20
-msgid "No data available."
 msgstr ""
 
 #: views/widget-front.php:38
@@ -211,10 +817,6 @@ msgstr ""
 msgid "Totals"
 msgstr ""
 
-#: views/widget-front.php:97
-msgid "today"
-msgstr ""
-
 #: views/widget-front.php:105
 msgid "since"
 msgstr ""
@@ -223,8 +825,8 @@ msgstr ""
 msgid "Refresh"
 msgstr ""
 
-#. Plugin Name of the plugin/theme
-msgid "CP-Stats"
+#. Plugin URI of the plugin/theme
+msgid "https://n3rds.work/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -233,9 +835,9 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "pluginkollektiv"
+msgid "DerN3rd"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://pluginkollektiv.org/"
+msgid "https://n3rds.work"
 msgstr ""

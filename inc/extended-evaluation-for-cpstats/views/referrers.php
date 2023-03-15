@@ -31,7 +31,7 @@ if ( isset( $_POST['start'], $_POST['end'] ) && check_admin_referer( 'referrers'
 		$valid_end = eefcpstats_is_valid_date_string( $end );
 		if ( ! $valid_start || ! $valid_end ) {
 			// Error message if at least one date is not valid.
-			$message = __( 'No valid date period set. Please enter a valid start and a valid end date!', 'extended-evaluation-for-cpstats' );
+			$message = __( 'No valid date period set. Please enter a valid start and a valid end date!', 'cpstats' );
 		}
 	}
 }
@@ -40,14 +40,14 @@ $referrers = eefcpstats_get_views_for_all_referrers( $selected_post, $start, $en
 $referrers_for_diagram = array_slice( $referrers, 0, 24, true );
 
 $filename = eefcpstats_get_filename(
-	__( 'Referrers', 'extended-evaluation-for-cpstats' )
+	__( 'Referrers', 'cpstats' )
 	. eefcpstats_get_date_period_string( $start, $end, $valid_start && $valid_end )
 	. '-' . eefcpstats_get_post_title_from_url( $selected_post )
 );
 ?>
 <div class="wrap eefcpstats">
-	<h1><?php esc_html_e( 'CPStats – Extended Evaluation', 'extended-evaluation-for-cpstats' ); ?>
-			&rsaquo; <?php esc_html_e( 'Referrers from other websites', 'extended-evaluation-for-cpstats' ); ?></h1>
+	<h1><?php esc_html_e( 'CPStats – Extended Evaluation', 'cpstats' ); ?>
+			&rsaquo; <?php esc_html_e( 'Referrers from other websites', 'cpstats' ); ?></h1>
 	<?php if ( '' !== $message ) { ?>
 	<div class="notice notice-error">
 		<p><?php echo esc_html( $message ); ?></p>
@@ -57,13 +57,13 @@ $filename = eefcpstats_get_filename(
 		<?php wp_nonce_field( 'referrers' ); ?>
 		<?php eefcpstats_echo_date_selection( $valid_start, $start, $valid_end, $end ); ?>
 		<fieldset>
-			<legend><?php esc_html_e( 'Per default the views of all posts are shown. To restrict the evaluation to one post/page, enter their path or name.', 'extended-evaluation-for-cpstats' ); ?></legend>
+			<legend><?php esc_html_e( 'Per default the views of all posts are shown. To restrict the evaluation to one post/page, enter their path or name.', 'cpstats' ); ?></legend>
 			<?php eefcpstats_echo_post_selection( $selected_post ); ?>
-			<button type="submit" class="button-secondary"><?php esc_html_e( 'Select post/page', 'extended-evaluation-for-cpstats' ); ?></button>
+			<button type="submit" class="button-secondary"><?php esc_html_e( 'Select post/page', 'cpstats' ); ?></button>
 		</fieldset>
 	</form>
 <?php if ( count( $referrers ) === 0 ) { ?>
-	<p><?php esc_html_e( 'No data available.', 'extended-evaluation-for-cpstats' ); ?></p>
+	<p><?php esc_html_e( 'No data available.', 'cpstats' ); ?></p>
 <?php } else { ?>
 	<section>
 		<?php
@@ -74,7 +74,7 @@ $filename = eefcpstats_get_filename(
 
 		eefcpstats_echo_chart_container(
 			'chart-referrers',
-			__( 'Referrers from other websites', 'extended-evaluation-for-cpstats' ),
+			__( 'Referrers from other websites', 'cpstats' ),
 			eefcpstats_get_post_title_from_url( $selected_post ) . eefcpstats_get_date_period_string( $start, $end, $valid_start && $valid_end, true ),
 			$legend
 		);
@@ -93,7 +93,7 @@ $filename = eefcpstats_get_filename(
 		</script>
 	</section>	
 	<section>
-		<h3><?php esc_html_e( 'Referrers from other websites', 'extended-evaluation-for-cpstats' ); ?>
+		<h3><?php esc_html_e( 'Referrers from other websites', 'cpstats' ); ?>
 			<?php echo esc_html( eefcpstats_get_date_period_string( $start, $end, $valid_start && $valid_end, true ) ); ?>
 			<?php
 			echo esc_html( eefcpstats_get_post_type_name_and_title_from_url( $selected_post ) );
@@ -103,9 +103,9 @@ $filename = eefcpstats_get_filename(
 		<table id="table-data" class="wp-list-table widefat striped">
 			<thead>
 				<tr>
-					<th scope="col"><?php esc_html_e( 'Referring Domain', 'extended-evaluation-for-cpstats' ); ?></th>
-					<th scope="col"><?php esc_html_e( 'Views', 'extended-evaluation-for-cpstats' ); ?></th>
-					<th scope="col"><?php esc_html_e( 'Proportion', 'extended-evaluation-for-cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Referring Domain', 'cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Views', 'cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Proportion', 'cpstats' ); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -125,7 +125,7 @@ $filename = eefcpstats_get_filename(
 			</tbody>
 			<tfoot>
 				<tr>
-					<td><?php esc_html_e( 'Sum', 'extended-evaluation-for-cpstats' ); ?></td>
+					<td><?php esc_html_e( 'Sum', 'cpstats' ); ?></td>
 					<td class="right"><?php eefcpstats_echo_number( $total ); ?></td>
 					<td class="right"><?php eefcpstats_echo_percentage( 1 ); ?></td>
 				</tr>

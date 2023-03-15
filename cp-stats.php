@@ -104,3 +104,9 @@ function load_cpstats_blacklist() {
 	require_once( plugin_dir_path( __FILE__ ) . 'inc/cpstats-blacklist/cpstats-blacklist.php' );
 }
 add_action( 'plugins_loaded', 'load_cpstats_blacklist' );
+
+// Load cpstats-extended-evaluation plugin
+function load_extended_evaluation_for_cpstats() {
+	require_once( plugin_dir_path( __FILE__ ) . 'inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php' );
+}
+add_action( 'plugins_loaded', 'load_extended_evaluation_for_cpstats' );

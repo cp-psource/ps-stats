@@ -18,7 +18,7 @@ class CPStatsWidget extends WP_Widget {
 	* Register CPStatsWidget to Wordpress
 	*/
 	function __construct() {
-		$widget_ops = array('classname' => 'cpstats-widget', 'description' => __('Shows the most popular content. Based on CP-Stats Plugin.','cpstats-widget'));
+		$widget_ops = array('classname' => 'cpstats-widget', 'description' => __('Shows the most popular content. Based on CP-Stats Plugin.', 'cpstats'));
 		parent::__construct(
 			'CPStatsWidget',
 			__('CP-Stats Widget', 'plugin_name'),
@@ -40,7 +40,7 @@ class CPStatsWidget extends WP_Widget {
 			'interval' => DEFAULT_INTERVAL,
 			'show_visits' => 0,
 			'list_style_type' => "ol",
-			'suffix' => __('%VIEWS% views','cpstats-widget'),
+			'suffix' => __('%VIEWS% views', 'cpstats'),
 			'post_category' => 0) );
 
     	$title = $instance['title'];
@@ -52,14 +52,14 @@ class CPStatsWidget extends WP_Widget {
 		$post_category = $instance['post_category'];
 ?>
         <p>
-          <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Widget title:','cpstats-widget'); ?>
+          <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Widget title:', 'cpstats'); ?>
             <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
           </label>
         </p>
         <p class="post_select">
-        <label for="<?php echo $this->get_field_id('post_type'); ?>"><?php _e( 'Post type:','cpstats-widget'); ?>
+        <label for="<?php echo $this->get_field_id('post_type'); ?>"><?php _e( 'Post type:', 'cpstats'); ?>
         <select class="widefat" id="<?php echo $this->get_field_id('post_type'); ?>" name="<?php echo $this->get_field_name('post_type'); ?>">
-		  <option value="postpage"><?php _e( 'posts + pages','cpstats-widget'); ?></option>
+		  <option value="postpage"><?php _e( 'posts + pages', 'cpstats'); ?></option>
           <?php
                 $post_types = get_post_types( array('public'=>true, 'show_ui'=>true), 'objects' );
                 foreach ( $post_types as $type ) {
@@ -69,7 +69,7 @@ class CPStatsWidget extends WP_Widget {
         </select>
         </p>
 		<p class="category_select" style="display:none;">
-		<label for="<?php echo $this->get_field_id('post_category'); ?>"><?php _e( 'Post category:','cpstats-widget'); ?>
+		<label for="<?php echo $this->get_field_id('post_category'); ?>"><?php _e( 'Post category:', 'cpstats'); ?>
       <select class="widefat" id="<?php echo $this->get_field_id('post_category'); ?>" name="<?php echo $this->get_field_name('post_category'); ?>">
 			<option value="0">Alle Kategorien</option>
 		  <?php
@@ -81,26 +81,26 @@ class CPStatsWidget extends WP_Widget {
         </select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id('interval'); ?>"><?php _e( 'Last ','cpstats-widget'); ?>
+			<label for="<?php echo $this->get_field_id('interval'); ?>"><?php _e( 'Last ', 'cpstats'); ?>
 				<input id="<?php echo $this->get_field_id('interval'); ?>" name="<?php echo $this->get_field_name('interval'); ?>" type="text" size="3" value="<?php echo esc_attr($interval); ?>" />
-			</label><?php _e( ' days. (If enough stats exists)','cpstats-widget'); ?>
-			<br /><small><?php _e( '0 days = show all items','cpstats-widget'); ?></small>
+			</label><?php _e( ' days. (If enough stats exists)', 'cpstats'); ?>
+			<br /><small><?php _e( '0 days = show all items', 'cpstats'); ?></small>
 		</p>
         <p>
-          <label for="<?php echo $this->get_field_id('amount'); ?>"><?php _e( 'Amounts:','cpstats-widget'); ?>
+          <label for="<?php echo $this->get_field_id('amount'); ?>"><?php _e( 'Amounts:', 'cpstats'); ?>
             <input id="<?php echo $this->get_field_id('amount'); ?>" name="<?php echo $this->get_field_name('amount'); ?>" type="text" size="3" value="<?php echo esc_attr($amount); ?>" />
           </label>
 		</p>
 		<p>
           <label for="<?php echo $this->get_field_id('show_visits'); ?>">
             <input class="checkbox" type="checkbox" id="<?php echo $this->get_field_id('show_visits'); ?>" name="<?php echo $this->get_field_name('show_visits'); ?>" value="1" <?php checked($show_visits,1); ?>>
-            <?php _e( 'Show view counter?','cpstats-widget'); ?></label>
+            <?php _e( 'Show view counter?', 'cpstats'); ?></label>
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('suffix'); ?>"><?php _e( 'Custom text:','cpstats-widget'); ?>
+            <label for="<?php echo $this->get_field_id('suffix'); ?>"><?php _e( 'Custom text:', 'cpstats'); ?>
             <input id="<?php echo $this->get_field_id('suffix'); ?>" class="widefat" name="<?php echo $this->get_field_name('suffix'); ?>" type="text" value="<?php echo esc_attr($suffix); ?>" />
 			</label>
-            <small><?php _e( '%VIEWS% = amount of views','cpstats-widget'); ?></small>
+            <small><?php _e( '%VIEWS% = amount of views', 'cpstats'); ?></small>
         </p>
 <?php
 	}
@@ -130,7 +130,7 @@ class CPStatsWidget extends WP_Widget {
 	function cpstats_widget_template($posts) {
 	?>
 			<?php if ( empty($posts) ): ?>
-			<p><?php __( 'There are no posts yet.','cpstats-widget' ) ?></p>
+			<p><?php __( 'There are no posts yet.', 'cpstats' ) ?></p>
 			<?php else: ?>
 
 			<ol class="cpstats-widget-list">
@@ -195,7 +195,7 @@ class CPStatsWidget extends WP_Widget {
 */
 function showErrorMessages() {
 	$html = '<div class="error"><p>';
-	$html .= __( 'Please install <a target="_blank" href="http://wordpress.org/plugins/cpstats/">CPStats</a> plugin first.','cpstats-widget');
+	$html .= __( 'Please install <a target="_blank" href="http://wordpress.org/plugins/cpstats/">CPStats</a> plugin first.', 'cpstats');
 	$html .= '</p></div>';
 	echo $html;
 }
@@ -266,15 +266,3 @@ function cpstats_count_sum($days = 0) {
 function cpstats_popular_posts($amount = 5, $days = 0, $post_type = 'post', $post_category = 0) {
 	return CPStats_Posts::get_post_list($post_type, $post_category, $amount, $days);
 }
-
-/**
- * Load plugin textdomain.
- *
- * @since 1.1.9
- */
-function cpstats_widget_load_textdomain() {
-  load_plugin_textdomain( 'cpstats-widget', false, basename( dirname( __FILE__ ) ) . '/languages' );
-}
-
-add_action( 'init', 'cpstats_widget_load_textdomain' );
-?>

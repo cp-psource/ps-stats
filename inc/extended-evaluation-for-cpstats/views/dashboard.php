@@ -38,11 +38,11 @@ if ( isset( $_GET['year'] ) && 4 === strlen( sanitize_text_field( wp_unslash( $_
 }
 ?>
 <div class="wrap eefcpstats">
-	<h1><?php esc_html_e( 'CPStats – Extended Evaluation', 'extended-evaluation-for-cpstats' ); ?></h1>
+	<h1><?php esc_html_e( 'CPStats – Extended Evaluation', 'cpstats' ); ?></h1>
 
-	<nav class="nav-tab-wrapper wp-clearfix" aria-label="<?php esc_html_e( 'Overview and Years', 'extended-evaluation-for-cpstats' ); ?>">
+	<nav class="nav-tab-wrapper wp-clearfix" aria-label="<?php esc_html_e( 'Overview and Years', 'cpstats' ); ?>">
 		<a href="<?php echo esc_url( admin_url( 'admin.php?page=extended_evaluation_for_cpstats_dashboard&post=' . $selected_post ) ); ?>"
-			class="<?php eefcpstats_echo_tab_class( 0 === $selected_year ); ?>"><?php esc_html_e( 'Overview', 'extended-evaluation-for-cpstats' ); ?></a>
+			class="<?php eefcpstats_echo_tab_class( 0 === $selected_year ); ?>"><?php esc_html_e( 'Overview', 'cpstats' ); ?></a>
 	<?php foreach ( $years as $year ) { ?>
 		<a href="<?php echo esc_url( admin_url( 'admin.php?page=extended_evaluation_for_cpstats_dashboard&year=' . $year . '&post=' . $selected_post ) ); ?>"
 			class="<?php eefcpstats_echo_tab_class( $selected_year === $year ); ?>"><?php echo esc_html( $year ); ?></a>
@@ -51,32 +51,32 @@ if ( isset( $_GET['year'] ) && 4 === strlen( sanitize_text_field( wp_unslash( $_
 	<form method="post" action="">
 		<?php wp_nonce_field( 'dashboard' ); ?>
 		<fieldset>
-			<legend><?php esc_html_e( 'Per default the views of all posts are shown. To restrict the evaluation to one post/page, enter their path or name.', 'extended-evaluation-for-cpstats' ); ?></legend>
+			<legend><?php esc_html_e( 'Per default the views of all posts are shown. To restrict the evaluation to one post/page, enter their path or name.', 'cpstats' ); ?></legend>
 			<?php eefcpstats_echo_post_selection( $selected_post ); ?>
-			<button type="submit" class="button-secondary"><?php esc_html_e( 'Select post/page', 'extended-evaluation-for-cpstats' ); ?></button>
+			<button type="submit" class="button-secondary"><?php esc_html_e( 'Select post/page', 'cpstats' ); ?></button>
 		</fieldset>
 	</form>
 <?php
 if ( 0 === $selected_year ) {
 	// Display the overview tab.
 	$filename_monthly = eefcpstats_get_filename(
-		__( 'Monthly Views', 'extended-evaluation-for-cpstats' )
+		__( 'Monthly Views', 'cpstats' )
 		. '-' . eefcpstats_get_post_title_from_url( $selected_post )
 	);
 	?>
 	<?php if ( count( $views_for_all_months ) === 0 ) { ?>
-	<p><?php esc_html_e( 'No data available.', 'extended-evaluation-for-cpstats' ); ?></p>
+	<p><?php esc_html_e( 'No data available.', 'cpstats' ); ?></p>
 	<?php } else { ?>
 	<section>
 		<?php
 		eefcpstats_echo_chart_container(
 			'chart-monthly',
-			__( 'Monthly Views', 'extended-evaluation-for-cpstats' ),
+			__( 'Monthly Views', 'cpstats' ),
 			eefcpstats_get_post_title_from_url( $selected_post )
 		);
 		eefcpstats_echo_chart_container(
 			'chart-yearly',
-			__( 'Yearly Views', 'extended-evaluation-for-cpstats' ),
+			__( 'Yearly Views', 'cpstats' ),
 			eefcpstats_get_post_title_from_url( $selected_post )
 		);
 		?>
@@ -104,7 +104,7 @@ if ( 0 === $selected_year ) {
 		</script>
 	</section>
 	<section>
-		<h3><?php esc_html_e( 'Monthly / Yearly Views', 'extended-evaluation-for-cpstats' ); ?>
+		<h3><?php esc_html_e( 'Monthly / Yearly Views', 'cpstats' ); ?>
 			<?php
 			echo esc_html( eefcpstats_get_post_type_name_and_title_from_url( $selected_post ) );
 			eefcpstats_echo_export_button( $filename_monthly );
@@ -113,11 +113,11 @@ if ( 0 === $selected_year ) {
 		<table id="table-data" class="wp-list-table widefat striped">
 			<thead>
 				<tr>
-					<th scope="col"><?php esc_html_e( 'Year', 'extended-evaluation-for-cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Year', 'cpstats' ); ?></th>
 					<?php foreach ( $months as $month ) { ?>
 					<th scope="col"><?php echo esc_html( eefcpstats_get_month_name( $month ) ); ?></th>
 					<?php } ?>
-					<th scope="col" class="right sum"><?php esc_html_e( 'Sum', 'extended-evaluation-for-cpstats' ); ?></th>
+					<th scope="col" class="right sum"><?php esc_html_e( 'Sum', 'cpstats' ); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -137,7 +137,7 @@ if ( 0 === $selected_year ) {
 	<?php
 } else {
 	$filename_daily = eefcpstats_get_filename(
-		__( 'Daily Views', 'extended-evaluation-for-cpstats' )
+		__( 'Daily Views', 'cpstats' )
 		. '-' . $selected_year . '-' . eefcpstats_get_post_title_from_url( $selected_post )
 	);
 	?>
@@ -145,12 +145,12 @@ if ( 0 === $selected_year ) {
 		<?php
 		eefcpstats_echo_chart_container(
 			'chart-daily',
-			__( 'Daily Views', 'extended-evaluation-for-cpstats' ) . ' ' . $selected_year,
+			__( 'Daily Views', 'cpstats' ) . ' ' . $selected_year,
 			eefcpstats_get_post_title_from_url( $selected_post )
 		);
 		eefcpstats_echo_chart_container(
 			'chart-monthly',
-			__( 'Monthly Views', 'extended-evaluation-for-cpstats' ) . ' ' . $selected_year,
+			__( 'Monthly Views', 'cpstats' ) . ' ' . $selected_year,
 			eefcpstats_get_post_title_from_url( $selected_post )
 		);
 		?>
@@ -184,7 +184,7 @@ if ( 0 === $selected_year ) {
 		</script>
 	</section>
 	<section>
-		<h3><?php echo esc_html( __( 'Daily Views', 'extended-evaluation-for-cpstats' ) . ' ' . $selected_year ); ?>
+		<h3><?php echo esc_html( __( 'Daily Views', 'cpstats' ) . ' ' . $selected_year ); ?>
 			<?php
 			echo esc_html( eefcpstats_get_post_type_name_and_title_from_url( $selected_post ) );
 			eefcpstats_echo_export_button( $filename_daily );
@@ -209,19 +209,19 @@ if ( 0 === $selected_year ) {
 				</tr>
 				<?php } ?>
 				<tr class="sum">
-					<td><?php esc_html_e( 'Sum', 'extended-evaluation-for-cpstats' ); ?></td>
+					<td><?php esc_html_e( 'Sum', 'cpstats' ); ?></td>
 					<?php foreach ( $months as $month ) { ?>
 					<td class="right"><?php eefcpstats_echo_number( eefcpstats_get_monthly_views( $views_for_all_months, $selected_year, $month ) ); ?></td>
 					<?php } ?>
 				</tr>
 				<tr>
-					<td><?php esc_html_e( 'Average', 'extended-evaluation-for-cpstats' ); ?></td>
+					<td><?php esc_html_e( 'Average', 'cpstats' ); ?></td>
 					<?php foreach ( $months as $month ) { ?>
 					<td class="right"><?php eefcpstats_echo_number( eefcpstats_get_average_daily_views_of_month( $views_for_all_months, $selected_year, $month ) ); ?></td>
 					<?php } ?>
 				</tr>
 				<tr>
-					<td><?php esc_html_e( 'Minimum', 'extended-evaluation-for-cpstats' ); ?></td>
+					<td><?php esc_html_e( 'Minimum', 'cpstats' ); ?></td>
 					<?php
 					$daily_views = [];
 					foreach ( $months as $month ) {
@@ -231,7 +231,7 @@ if ( 0 === $selected_year ) {
 					<?php } ?>
 				</tr>
 				<tr>
-					<td><?php esc_html_e( 'Maximum', 'extended-evaluation-for-cpstats' ); ?></td>
+					<td><?php esc_html_e( 'Maximum', 'cpstats' ); ?></td>
 					<?php foreach ( $months as $month ) { ?>
 					<td class="right"><?php eefcpstats_echo_number( max( $daily_views[ $month ] ) ); ?></td>
 					<?php } ?>

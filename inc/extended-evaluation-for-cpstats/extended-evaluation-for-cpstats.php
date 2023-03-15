@@ -1,15 +1,9 @@
 <?php
 /**
  * Plugin Name: CPStats – Extended Evaluation
- * Plugin URI: https://patrick-robrecht.de/wordpress/
  * Description: Extended evaluation for the compact, easy-to-use and privacy-compliant CPStats plugin.
  * Version: 2.6.3
- * Author: Patrick Robrecht
- * Author URI: https://patrick-robrecht.de/
- * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: extended-evaluation-for-cpstats
- *
+ * 
  * @package extended-evaluation-for-cpstats
  */
 
@@ -19,8 +13,10 @@ defined( 'ABSPATH' ) || exit;
 define( 'EEFSTATFIFY_VERSION', '2.6.3' );
 
 // Includes.
-require_once 'inc/queries.php';
-require_once 'inc/formatting.php';
+//require_once 'inc/queries.php';
+//require_once 'inc/formatting.php';
+require_once( 'inc/queries.php' );
+require_once( 'inc/formatting.php' );
 
 /**
  * Requires CPStats to be installed and activated during installation.
@@ -31,14 +27,12 @@ function eefcpstats_activate() {
 		wp_die(
 			esc_html(
 				__(
-					'CPStats – Extended Evaluation requires the plugin CPStats which has to be installed and activated! Please install and activate CPStats before activating this plugin!',
-					'extended-evaluation-for-cpstats'
+					'CP-Stats – Extended Evaluation requires the plugin CP-Stats which has to be installed and activated! Please install and activate CP-Stats before activating this plugin!', 'cpstats'
 				)
 			),
 			esc_html(
 				__(
-					'Activation Error: CPStats – Extended Evaluation requires CPStats!',
-					'extended-evaluation-for-cpstats'
+					'Activation Error: CP-Stats – Extended Evaluation requires CP-Stats!', 'cpstats'
 				)
 			),
 			array(
@@ -72,8 +66,7 @@ function eefcpstats_check_status() {
 		echo '<div class="error"><p>'
 			. esc_html(
 				__(
-					'CPStats – Extended Evaluation requires the plugin CPStats which has to be installed and activated! Please install and activate CPStats before activating this plugin!',
-					'extended-evaluation-for-cpstats'
+					'CP-Stats – Extended Evaluation requires the plugin CP-Stats which has to be installed and activated! Please install and activate CP-Stats before activating this plugin!', 'cpstats'
 				)
 			)
 			 . '</p></div>';
@@ -91,18 +84,8 @@ add_action( 'admin_notices', 'eefcpstats_check_status' );
  * @return boolean true if and only if CPStats is installed and active.
  */
 function eefcpstats_is_cpstats_active() {
-	return is_plugin_active( 'cpstats/cpstats.php' );
+	return is_plugin_active( 'cp-stats/cp-stats.php' );
 }
-
-/**
- * Load text domain for translation.
- */
-function eefcpstats_load_plugin_textdomain() {
-	load_plugin_textdomain( 'extended-evaluation-for-cpstats' );
-}
-
-// Add text domain during initialization.
-add_action( 'init', 'eefcpstats_load_plugin_textdomain' );
 
 /**
  * Register and load the style sheets and JavaScript libraries.
@@ -140,8 +123,8 @@ function eefcpstats_register_and_load_assets() {
 			'eefcpstats_functions',
 			'eefcpstats_translations',
 			array(
-				'view'  => strip_tags( esc_html__( 'View', 'extended-evaluation-for-cpstats' ) ),
-				'views' => strip_tags( esc_html__( 'Views', 'extended-evaluation-for-cpstats' ) ),
+				'view'  => strip_tags( esc_html__( 'View', 'cpstats' ) ),
+				'views' => strip_tags( esc_html__( 'Views', 'cpstats' ) ),
 			)
 		);
 	}
@@ -190,8 +173,8 @@ function eefcpstats_enqueue_script( $script_name, $script_path, $dependencies = 
 function eefcpstats_add_menu() {
 	$page_hook_suffixes   = [];
 	$page_hook_suffixes[] = add_menu_page(
-		__( 'CPStats – Extended Evaluation', 'extended-evaluation-for-cpstats' ), // page title.
-		'CPStats', // title in the menu.
+		__( 'CP-Stats – Extended Evaluation', 'cpstats' ), // page title.
+		'CP-Stats', // title in the menu.
 		'see_cpstats_evaluation',
 		'extended_evaluation_for_cpstats_dashboard',
 		'eefcpstats_show_dashboard',
@@ -200,18 +183,18 @@ function eefcpstats_add_menu() {
 	);
 	$page_hook_suffixes[] = add_submenu_page(
 		'extended_evaluation_for_cpstats_dashboard',
-		__( 'Content', 'extended-evaluation-for-cpstats' )
-		. ' &mdash; ' . __( 'CPStats – Extended Evaluation', 'extended-evaluation-for-cpstats' ),
-		__( 'Content', 'extended-evaluation-for-cpstats' ),
+		__( 'Content', 'cpstats' )
+		. ' &mdash; ' . __( 'CPStats – Extended Evaluation', 'cpstats' ),
+		__( 'Content', 'cpstats' ),
 		'see_cpstats_evaluation',
 		'extended_evaluation_for_cpstats_content',
 		'eefcpstats_show_content'
 	);
 	$page_hook_suffixes[] = add_submenu_page(
 		'extended_evaluation_for_cpstats_dashboard',
-		__( 'Referrers', 'extended-evaluation-for-cpstats' )
-		. ' &mdash; ' . __( 'CPStats – Extended Evaluation', 'extended-evaluation-for-cpstats' ),
-		__( 'Referrers', 'extended-evaluation-for-cpstats' ),
+		__( 'Referrers', 'cpstats' )
+		. ' &mdash; ' . __( 'CPStats – Extended Evaluation', 'cpstats' ),
+		__( 'Referrers', 'cpstats' ),
 		'see_cpstats_evaluation',
 		'extended_evaluation_for_cpstats_referrer',
 		'eefcpstats_show_referrer'

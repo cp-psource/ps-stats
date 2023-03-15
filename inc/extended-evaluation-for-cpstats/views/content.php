@@ -34,23 +34,23 @@ if ( isset( $_POST['start'], $_POST['end'] ) && check_admin_referer( 'content' )
 		$valid_end = eefcpstats_is_valid_date_string( $end );
 		if ( ! $valid_start || ! $valid_end ) {
 			// Error message if at least one date is not valid.
-			$message = __( 'No valid date period set. Please enter a valid start and a valid end date!', 'extended-evaluation-for-cpstats' );
+			$message = __( 'No valid date period set. Please enter a valid start and a valid end date!', 'cpstats' );
 		}
 	}
 }
 ?>
 <div class="wrap eefcpstats">
-	<h1><?php esc_html_e( 'CPStats – Extended Evaluation', 'extended-evaluation-for-cpstats' ); ?>
-			&rsaquo; <?php esc_html_e( 'Content', 'extended-evaluation-for-cpstats' ); ?></h1>
+	<h1><?php esc_html_e( 'CP-Stats – Extended Evaluation', 'cpstats' ); ?>
+			&rsaquo; <?php esc_html_e( 'Content', 'cpstats' ); ?></h1>
 	<?php if ( '' !== $message ) { ?>
 	<div class="notice notice-error">
 		<p><?php echo esc_html( $message ); ?></p>
 	</div>
 	<?php } ?>
-	<nav class="nav-tab-wrapper wp-clearfix" aria-label="<?php esc_html_e( 'Popular Content and Post Types', 'extended-evaluation-for-cpstats' ); ?>">
+	<nav class="nav-tab-wrapper wp-clearfix" aria-label="<?php esc_html_e( 'Popular Content and Post Types', 'cpstats' ); ?>">
 		<a href="<?php echo esc_url( admin_url( 'admin.php?page=extended_evaluation_for_cpstats_content' ) ); ?>"
 			class="<?php eefcpstats_echo_tab_class( 'popular' === $selected_post_type ); ?>">
-				<?php esc_html_e( 'Most Popular Content', 'extended-evaluation-for-cpstats' ); ?></a>
+				<?php esc_html_e( 'Most Popular Content', 'cpstats' ); ?></a>
 	<?php foreach ( $post_types as $post_type ) { ?>
 		<a href="<?php echo esc_url( admin_url( 'admin.php?page=extended_evaluation_for_cpstats_content&posttype=' . $post_type ) ); ?>"
 			class="<?php eefcpstats_echo_tab_class( $selected_post_type === $post_type ); ?>">
@@ -68,7 +68,7 @@ if ( 'popular' === $selected_post_type ) {
 	$views_per_post_for_diagram = array_slice( $views_per_post, 0, 24, true );
 
 	$filename = eefcpstats_get_filename(
-		__( 'Most Popular Content', 'extended-evaluation-for-cpstats' )
+		__( 'Most Popular Content', 'cpstats' )
 		. eefcpstats_get_date_period_string( $start, $end, $valid_start && $valid_end )
 	);
 	?>
@@ -77,7 +77,7 @@ if ( 'popular' === $selected_post_type ) {
 		<?php eefcpstats_echo_date_selection( $valid_start, $start, $valid_end, $end ); ?>
 	</form>
 	<?php if ( count( $views_per_post ) === 0 ) { ?>
-	<p><?php esc_html_e( 'No data available.', 'extended-evaluation-for-cpstats' ); ?></p>
+	<p><?php esc_html_e( 'No data available.', 'cpstats' ); ?></p>
 	<?php } else { ?>
 	<section>
 		<?php
@@ -88,7 +88,7 @@ if ( 'popular' === $selected_post_type ) {
 
 		eefcpstats_echo_chart_container(
 			'chart-popular-content',
-			__( 'Most Popular Content', 'extended-evaluation-for-cpstats' ),
+			__( 'Most Popular Content', 'cpstats' ),
 			eefcpstats_get_date_period_string( $start, $end, $valid_start && $valid_end, true ),
 			$legend
 		);
@@ -111,7 +111,7 @@ if ( 'popular' === $selected_post_type ) {
 		</script>	
 	</section>
 	<section>
-		<h3><?php esc_html_e( 'Most Popular Content', 'extended-evaluation-for-cpstats' ); ?>
+		<h3><?php esc_html_e( 'Most Popular Content', 'cpstats' ); ?>
 			<?php
 			echo esc_html( eefcpstats_get_date_period_string( $start, $end, $valid_start && $valid_end, true ) );
 			eefcpstats_echo_export_button( $filename );
@@ -120,11 +120,11 @@ if ( 'popular' === $selected_post_type ) {
 		<table id="table-data" class="wp-list-table widefat striped">
 			<thead>
 				<tr>
-					<th scope="col"><?php esc_html_e( 'Post/Page', 'extended-evaluation-for-cpstats' ); ?></th>
-					<th scope="col"><?php esc_html_e( 'URL', 'extended-evaluation-for-cpstats' ); ?></th>
-					<th scope="col"><?php esc_html_e( 'Post Type', 'extended-evaluation-for-cpstats' ); ?></th>
-					<th scope="col"><?php esc_html_e( 'Views', 'extended-evaluation-for-cpstats' ); ?></th>
-					<th scope="col"><?php esc_html_e( 'Proportion', 'extended-evaluation-for-cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Post/Page', 'cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'URL', 'cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Post Type', 'cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Views', 'cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Proportion', 'cpstats' ); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -148,7 +148,7 @@ if ( 'popular' === $selected_post_type ) {
 			</tbody>
 			<tfoot>
 				<tr>
-					<td><?php esc_html_e( 'Sum', 'extended-evaluation-for-cpstats' ); ?></td>
+					<td><?php esc_html_e( 'Sum', 'cpstats' ); ?></td>
 					<td></td>
 					<td></td>
 					<td class="right"><?php eefcpstats_echo_number( $total ); ?></td>
@@ -181,7 +181,7 @@ if ( 'popular' === $selected_post_type ) {
 
 	if ( ! $query->have_posts() ) {
 		?>
-<p><?php esc_html_e( 'No data available.', 'extended-evaluation-for-cpstats' ); ?></p>
+<p><?php esc_html_e( 'No data available.', 'cpstats' ); ?></p>
 	<?php } else { ?>
 	<section>
 		<h3><?php echo esc_html( get_post_type_object( $post_type )->labels->name ); ?>
@@ -194,8 +194,8 @@ if ( 'popular' === $selected_post_type ) {
 			<thead>
 				<tr>
 					<th scope="col"><?php echo esc_html( get_post_type_object( $post_type )->labels->singular_name ); ?></th>
-					<th scope="col"><?php esc_html_e( 'URL', 'extended-evaluation-for-cpstats' ); ?></th>
-					<th scope="col"><?php esc_html_e( 'Views', 'extended-evaluation-for-cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'URL', 'cpstats' ); ?></th>
+					<th scope="col"><?php esc_html_e( 'Views', 'cpstats' ); ?></th>
 				</tr>
 			</thead>
 			<tbody>

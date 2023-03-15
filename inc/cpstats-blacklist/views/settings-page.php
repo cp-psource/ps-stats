@@ -21,7 +21,7 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 
 	// Check user capabilities.
 	if ( ! current_user_can( 'manage_options' ) ) {
-		die( esc_html__( 'Are you sure you want to do this?', 'cpstats-blacklist' ) );
+		die( esc_html__( 'Are you sure you want to do this?', 'cpstats' ) );
 	}
 
 	if ( ! empty( $_POST['cleanUp'] ) ) {
@@ -149,17 +149,17 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 		if ( false !== $cpstatsblacklist_update_result ) {
 			$cpstatsblacklist_post_warning = array();
 			if ( ! empty( $cpstatsblacklist_update_result['referer']['diff'] ) ) {
-				$cpstatsblacklist_post_warning[] = __( 'Some URLs are invalid and have been sanitized.', 'cpstats-blacklist' );
+				$cpstatsblacklist_post_warning[] = __( 'Some URLs are invalid and have been sanitized.', 'cpstats' );
 			}
 			if ( ! empty( $cpstatsblacklist_update_result['referer']['invalid'] ) ) {
-				$cpstatsblacklist_post_warning[] = __( 'Some regular expressions are invalid:', 'cpstats-blacklist' ) . '<br>' . implode( '<br>', $cpstatsblacklist_update_result['referer']['invalid'] );
+				$cpstatsblacklist_post_warning[] = __( 'Some regular expressions are invalid:', 'cpstats' ) . '<br>' . implode( '<br>', $cpstatsblacklist_update_result['referer']['invalid'] );
 			}
 			if ( ! empty( $cpstatsblacklist_update_result['ip']['diff'] ) ) {
 				// translators: List of invalid IP addresses (comma separated).
-				$cpstatsblacklist_post_warning[] = sprintf( __( 'Some IPs are invalid: %s', 'cpstats-blacklist' ), implode( ', ', $cpstatsblacklist_update_result['ip']['diff'] ) );
+				$cpstatsblacklist_post_warning[] = sprintf( __( 'Some IPs are invalid: %s', 'cpstats' ), implode( ', ', $cpstatsblacklist_update_result['ip']['diff'] ) );
 			}
 		} else {
-			$cpstatsblacklist_post_success = __( 'Settings updated successfully.', 'cpstats-blacklist' );
+			$cpstatsblacklist_post_success = __( 'Settings updated successfully.', 'cpstats' );
 		}
 	}
 }
@@ -173,11 +173,11 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 ?>
 
 <div class="wrap">
-	<h1><?php esc_html_e( 'CPStats Filter', 'cpstats-blacklist' ); ?></h1>
+	<h1><?php esc_html_e( 'CPStats Filter', 'cpstats' ); ?></h1>
 	<?php
 	if ( is_plugin_inactive( 'cpstats/cpstats.php' ) ) {
 		print '<div class="notice notice-warning"><p>';
-		esc_html_e( 'CPStats plugin is not active.', 'cpstats-blacklist' );
+		esc_html_e( 'CPStats plugin is not active.', 'cpstats' );
 		print '</p></div>';
 	}
 	if ( isset( $cpstatsblacklist_post_warning ) ) {
@@ -186,7 +186,7 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 				wp_kses( $w, array( 'br' => array() ) ) .
 				'</p></div>';
 		}
-		print '<div class="notice notice-warning"><p>' . esc_html__( 'Settings have not been saved yet.', 'cpstats-blacklist' ) . '</p></div>';
+		print '<div class="notice notice-warning"><p>' . esc_html__( 'Settings have not been saved yet.', 'cpstats' ) . '</p></div>';
 	}
 	if ( isset( $cpstatsblacklist_post_success ) ) {
 		print '<div class="notice notice-success"><p>' .
@@ -197,14 +197,14 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 	<form action="" method="post" id="cpstats-blacklist-settings">
 		<?php wp_nonce_field( 'cpstats-blacklist-settings' ); ?>
 
-		<h2><?php esc_html_e( 'Referer filter', 'cpstats-blacklist' ); ?></h2>
+		<h2><?php esc_html_e( 'Referer filter', 'cpstats' ); ?></h2>
 
 		<table class="form-table">
 			<tbody>
 			<tr>
 				<th scope="row">
 					<label for="cpstats-blacklist_active_referer">
-						<?php esc_html_e( 'Activate live filter', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Activate live filter', 'cpstats' ); ?>
 					</label>
 				</th>
 				<td>
@@ -212,54 +212,54 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 						   id="cpstats-blacklist_active_referer"
 						   value="1" <?php checked( CPStatsBlacklist::$options['referer']['active'], 1 ); ?>>
 					<p class="description">
-						<?php esc_html_e( 'Filter at time of tracking, before anything is stored', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Filter at time of tracking, before anything is stored', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
 					<label for="cpstats-blacklist_cron_referer">
-						<?php esc_html_e( 'CronJob execution', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'CronJob execution', 'cpstats' ); ?>
 					</label>
 				</th>
 				<td>
 					<input type="checkbox" name="cpstatsblacklist[referer][cron]" id="cpstats-blacklist_cron_referer"
 						   value="1" <?php checked( CPStatsBlacklist::$options['referer']['cron'], 1 ); ?>>
-					<p class="description"><?php esc_html_e( 'Periodically clean up database in background', 'cpstats-blacklist' ); ?></p>
+					<p class="description"><?php esc_html_e( 'Periodically clean up database in background', 'cpstats' ); ?></p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
-					<label for="cpstats-blacklist_referer_regexp"><?php esc_html_e( 'Matching method', 'cpstats-blacklist' ); ?></label>
+					<label for="cpstats-blacklist_referer_regexp"><?php esc_html_e( 'Matching method', 'cpstats' ); ?></label>
 				</th>
 				<td>
 					<select name="cpstatsblacklist[referer][regexp]" id="cpstats-blacklist_referer_regexp">
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_NORMAL ); ?>" <?php selected( CPStatsBlacklist::$options['referer']['regexp'], CPStatsBlacklist::MODE_NORMAL ); ?>>
-							<?php esc_html_e( 'Domain', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'Domain', 'cpstats' ); ?>
 						</option>
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_KEYWORD ); ?>" <?php selected( CPStatsBlacklist::$options['referer']['regexp'], CPStatsBlacklist::MODE_KEYWORD ); ?>>
-							<?php esc_html_e( 'Keyword', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'Keyword', 'cpstats' ); ?>
 						</option>
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_REGEX ); ?>" <?php selected( CPStatsBlacklist::$options['referer']['regexp'], CPStatsBlacklist::MODE_REGEX ); ?>>
-							<?php esc_html_e( 'RegEx case-sensitive', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'RegEx case-sensitive', 'cpstats' ); ?>
 						</option>
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_REGEX_CI ); ?>" <?php selected( CPStatsBlacklist::$options['referer']['regexp'], CPStatsBlacklist::MODE_REGEX_CI ); ?>>
-							<?php esc_html_e( 'RegEx case-insensitive', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'RegEx case-insensitive', 'cpstats' ); ?>
 						</option>
 					</select>
 
 					<p class="description">
-						<?php esc_html_e( 'Domain', 'cpstats-blacklist' ); ?> - <?php esc_html_e( 'Match given domain including subdomains', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Domain', 'cpstats' ); ?> - <?php esc_html_e( 'Match given domain including subdomains', 'cpstats' ); ?>
 						<br>
-						<?php esc_html_e( 'Keyword', 'cpstats-blacklist' ); ?> - <?php esc_html_e( 'Match every referer that contains one of the keywords', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Keyword', 'cpstats' ); ?> - <?php esc_html_e( 'Match every referer that contains one of the keywords', 'cpstats' ); ?>
 						<br>
-						<?php esc_html_e( 'RegEx', 'cpstats-blacklist' ); ?> - <?php esc_html_e( 'Match referer by regular expression', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'RegEx', 'cpstats' ); ?> - <?php esc_html_e( 'Match referer by regular expression', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
-					<label for="cpstats-blacklist_referer"><?php esc_html_e( 'Referer filter', 'cpstats-blacklist' ); ?></label>
+					<label for="cpstats-blacklist_referer"><?php esc_html_e( 'Referer filter', 'cpstats' ); ?></label>
 				</th>
 				<td>
 					<textarea cols="40" rows="5" name="cpstatsblacklist[referer][blacklist]" id="cpstats-blacklist_referer"><?php
@@ -270,21 +270,21 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 					}
 					?></textarea>
 					<p class="description">
-						<?php esc_html_e( 'Add one domain (without subdomains) each line, e.g. example.com', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Add one domain (without subdomains) each line, e.g. example.com', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			</tbody>
 		</table>
 
-		<h2><?php esc_html_e( 'Target filter', 'cpstats-blacklist' ); ?></h2>
+		<h2><?php esc_html_e( 'Target filter', 'cpstats' ); ?></h2>
 
 		<table class="form-table">
 			<tbody>
 			<tr>
 				<th scope="row">
 					<label for="cpstats-blacklist_active_target">
-						<?php esc_html_e( 'Activate live filter', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Activate live filter', 'cpstats' ); ?>
 					</label>
 				</th>
 				<td>
@@ -292,54 +292,54 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 						   id="cpstats-blacklist_active_target"
 						   value="1" <?php checked( CPStatsBlacklist::$options['target']['active'], 1 ); ?>>
 					<p class="description">
-						<?php esc_html_e( 'Filter at time of tracking, before anything is stored', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Filter at time of tracking, before anything is stored', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
 					<label for="cpstats-blacklist_cron_target">
-						<?php esc_html_e( 'CronJob execution', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'CronJob execution', 'cpstats' ); ?>
 					</label>
 				</th>
 				<td>
 					<input type="checkbox" name="cpstatsblacklist[target][cron]" id="cpstats-blacklist_cron_target"
 						   value="1" <?php checked( CPStatsBlacklist::$options['target']['cron'], 1 ); ?>>
 					<p class="description">
-						<?php esc_html_e( 'Clean database periodically in background', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Clean database periodically in background', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
 					<label for="cpstats-blacklist_target_regexp">
-						<?php esc_html_e( 'Matching method', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Matching method', 'cpstats' ); ?>
 					</label>
 				</th>
 				<td>
 					<select name="cpstatsblacklist[target][regexp]" id="cpstats-blacklist_target_regexp">
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_NORMAL ); ?>" <?php selected( CPStatsBlacklist::$options['target']['regexp'], CPStatsBlacklist::MODE_NORMAL ); ?>>
-							<?php esc_html_e( 'Exact', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'Exact', 'cpstats' ); ?>
 						</option>
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_REGEX ); ?>" <?php selected( CPStatsBlacklist::$options['target']['regexp'], CPStatsBlacklist::MODE_REGEX ); ?>>
-							<?php esc_html_e( 'RegEx case-sensitive', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'RegEx case-sensitive', 'cpstats' ); ?>
 						</option>
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_REGEX_CI ); ?>" <?php selected( CPStatsBlacklist::$options['target']['regexp'], CPStatsBlacklist::MODE_REGEX_CI ); ?>>
-							<?php esc_html_e( 'RegEx case-insensitive', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'RegEx case-insensitive', 'cpstats' ); ?>
 						</option>
 					</select>
 
 					<p class="description">
-						<?php esc_html_e( 'Exact', 'cpstats-blacklist' ); ?> - <?php esc_html_e( 'Match only given targets', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Exact', 'cpstats' ); ?> - <?php esc_html_e( 'Match only given targets', 'cpstats' ); ?>
 						<br>
-						<?php esc_html_e( 'RegEx', 'cpstats-blacklist' ); ?> - <?php esc_html_e( 'Match target by regular expression', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'RegEx', 'cpstats' ); ?> - <?php esc_html_e( 'Match target by regular expression', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
 					<label for="cpstats-blacklist_target">
-						<?php esc_html_e( 'Target filter', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Target filter', 'cpstats' ); ?>
 					</label>
 				</th>
 				<td>
@@ -352,36 +352,36 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 					?></textarea>
 
 					<p class="description">
-						<?php esc_html_e( 'Add one target URL each line, e.g.', 'cpstats-blacklist' ); ?> /, /test/page/, /?page_id=123
+						<?php esc_html_e( 'Add one target URL each line, e.g.', 'cpstats' ); ?> /, /test/page/, /?page_id=123
 					</p>
 				</td>
 			</tr>
 			</tbody>
 		</table>
 
-		<h2><?php esc_html_e( 'IP filter', 'cpstats-blacklist' ); ?></h2>
+		<h2><?php esc_html_e( 'IP filter', 'cpstats' ); ?></h2>
 
 		<table class="form-table">
 			<tbody>
 			<tr>
 				<th scope="row">
 					<label for="cpstats-blacklist_active_ip">
-						<?php esc_html_e( 'Activate live filter', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Activate live filter', 'cpstats' ); ?>
 					</label>
 				</th>
 				<td>
 					<input type="checkbox" name="cpstatsblacklist[ip][active]" id="cpstats-blacklist_active_ip"
 						   value="1" <?php checked( CPStatsBlacklist::$options['ip']['active'], 1 ); ?>>
 					<p class="description">
-						<?php esc_html_e( 'Filter at time of tracking, before anything is stored', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Filter at time of tracking, before anything is stored', 'cpstats' ); ?>
 						<br>
-						<?php esc_html_e( 'Cron execution is not possible for IP filter, because IP addresses are not stored.', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Cron execution is not possible for IP filter, because IP addresses are not stored.', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
-					<label for="cpstats-blacklist_ip"><?php esc_html_e( 'IP filter', 'cpstats-blacklist' ); ?></label>:
+					<label for="cpstats-blacklist_ip"><?php esc_html_e( 'IP filter', 'cpstats' ); ?></label>:
 				</th>
 				<td>
 					<textarea cols="40" rows="5" name="cpstatsblacklist[ip][blacklist]" id="cpstats-blacklist_ip"><?php
@@ -393,7 +393,7 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 					?></textarea>
 
 					<p class="description">
-						<?php esc_html_e( 'Add one IP address or range per line, e.g.', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Add one IP address or range per line, e.g.', 'cpstats' ); ?>
 						127.0.0.1, 192.168.123.0/24, 2001:db8:a0b:12f0::1/64
 					</p>
 				</td>
@@ -401,58 +401,58 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 			</tbody>
 		</table>
 
-		<h2><?php esc_html_e( 'User agent filter', 'cpstats-blacklist' ); ?></h2>
+		<h2><?php esc_html_e( 'User agent filter', 'cpstats' ); ?></h2>
 
 		<table class="form-table">
 			<tbody>
 			<tr>
 				<th scope="row">
 					<label for="cpstats-blacklist_active_ua">
-						<?php esc_html_e( 'Activate live filter', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Activate live filter', 'cpstats' ); ?>
 					</label>
 				</th>
 				<td>
 					<input type="checkbox" name="cpstatsblacklist[ua][active]" id="cpstats-blacklist_active_ua"
 						   value="1" <?php checked( CPStatsBlacklist::$options['ua']['active'], 1 ); ?>>
 					<p class="description">
-						<?php esc_html_e( 'Filter at time of tracking, before anything is stored', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Filter at time of tracking, before anything is stored', 'cpstats' ); ?>
 						<br>
-						<?php esc_html_e( 'Cron execution is not possible for user agent filter, because the user agent is stored.', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Cron execution is not possible for user agent filter, because the user agent is stored.', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
-					<label for="cpstats-blacklist_ua_regexp"><?php esc_html_e( 'Matching method', 'cpstats-blacklist' ); ?></label>
+					<label for="cpstats-blacklist_ua_regexp"><?php esc_html_e( 'Matching method', 'cpstats' ); ?></label>
 				</th>
 				<td>
 					<select name="cpstatsblacklist[ua][regexp]" id="cpstats-blacklist_ua_regexp">
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_NORMAL ); ?>" <?php selected( CPStatsBlacklist::$options['ua']['regexp'], CPStatsBlacklist::MODE_NORMAL ); ?>>
-							<?php esc_html_e( 'Exact', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'Exact', 'cpstats' ); ?>
 						</option>
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_KEYWORD ); ?>" <?php selected( CPStatsBlacklist::$options['ua']['regexp'], CPStatsBlacklist::MODE_KEYWORD ); ?>>
-							<?php esc_html_e( 'Keyword', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'Keyword', 'cpstats' ); ?>
 						</option>
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_REGEX ); ?>" <?php selected( CPStatsBlacklist::$options['ua']['regexp'], CPStatsBlacklist::MODE_REGEX ); ?>>
-							<?php esc_html_e( 'RegEx case-sensitive', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'RegEx case-sensitive', 'cpstats' ); ?>
 						</option>
 						<option value="<?php print esc_attr( CPStatsBlacklist::MODE_REGEX_CI ); ?>" <?php selected( CPStatsBlacklist::$options['ua']['regexp'], CPStatsBlacklist::MODE_REGEX_CI ); ?>>
-							<?php esc_html_e( 'RegEx case-insensitive', 'cpstats-blacklist' ); ?>
+							<?php esc_html_e( 'RegEx case-insensitive', 'cpstats' ); ?>
 						</option>
 					</select>
 
 					<p class="description">
-						<?php esc_html_e( 'Exact', 'cpstats-blacklist' ); ?> - <?php esc_html_e( 'Match only given user agents', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Exact', 'cpstats' ); ?> - <?php esc_html_e( 'Match only given user agents', 'cpstats' ); ?>
 						<br>
-						<?php esc_html_e( 'Keyword', 'cpstats-blacklist' ); ?> - <?php esc_html_e( 'Match every referer that contains one of the keywords', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Keyword', 'cpstats' ); ?> - <?php esc_html_e( 'Match every referer that contains one of the keywords', 'cpstats' ); ?>
 						<br>
-						<?php esc_html_e( 'RegEx', 'cpstats-blacklist' ); ?> - <?php esc_html_e( 'Match user agent by regular expression', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'RegEx', 'cpstats' ); ?> - <?php esc_html_e( 'Match user agent by regular expression', 'cpstats' ); ?>
 					</p>
 				</td>
 			</tr>
 			<tr>
 				<th scope="row">
-					<label for="cpstats-blacklist_ua"><?php esc_html_e( 'User agent filter', 'cpstats-blacklist' ); ?></label>:
+					<label for="cpstats-blacklist_ua"><?php esc_html_e( 'User agent filter', 'cpstats' ); ?></label>:
 				</th>
 				<td>
 					<textarea cols="40" rows="5" name="cpstatsblacklist[ua][blacklist]" id="cpstats-blacklist_ua"><?php
@@ -464,7 +464,7 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 					?></textarea>
 
 					<p class="description">
-						<?php esc_html_e( 'Add one user agent string per line, e.g.', 'cpstats-blacklist' ); ?>
+						<?php esc_html_e( 'Add one user agent string per line, e.g.', 'cpstats' ); ?>
 						MyBot/1.23
 					</p>
 				</td>
@@ -473,15 +473,15 @@ if ( ! empty( $_POST['cpstatsblacklist'] ) ) {
 		</table>
 
 		<p class="submit">
-			<input class="button-primary" type="submit" name="submit" value="<?php esc_html_e( 'Save Changes', 'cpstats-blacklist' ); ?>">
+			<input class="button-primary" type="submit" name="submit" value="<?php esc_html_e( 'Save Changes', 'cpstats' ); ?>">
 			<hr>
 			<input class="button-secondary" type="submit" name="cleanUp"
-				   value="<?php esc_html_e( 'CleanUp Database', 'cpstats-blacklist' ); ?>"
+				   value="<?php esc_html_e( 'CleanUp Database', 'cpstats' ); ?>"
 				   onclick="return confirm('Do you really want to apply filters to database? This cannot be undone.');">
 			<br>
 			<p class="description">
-				<?php esc_html_e( 'Applies referer and target filter (even if disabled) to data stored in database.', 'cpstats-blacklist' ); ?>
-				<em><?php esc_html_e( 'This cannot be undone!', 'cpstats-blacklist' ); ?></em>
+				<?php esc_html_e( 'Applies referer and target filter (even if disabled) to data stored in database.', 'cpstats' ); ?>
+				<em><?php esc_html_e( 'This cannot be undone!', 'cpstats' ); ?></em>
 			</p>
 		</p>
 	</form>

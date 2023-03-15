@@ -71,7 +71,7 @@ class CPStats_Posts {
 			
 			// Manipulate Frontpage Post (ID==0) to fix values
 			if ($post_id == 0) {
-				$wp_posts[$post_id]->post_title = __('Frontpage','cpstats-widget');
+				$wp_posts[$post_id]->post_title = __('Frontpage', 'cpstats');
 				$wp_posts[$post_id]->post_permalink = get_home_url();
 			}
 			
@@ -173,7 +173,7 @@ class CPStats_Posts {
 		// Attr
 		$a = shortcode_atts( array(
 			'prefix' => '',
-			'suffix' => __('views','cpstats-widget'),
+			'suffix' => __('views', 'cpstats'),
 			'days' => 0
 		), $atts );
 
@@ -193,7 +193,7 @@ class CPStats_Posts {
 		// Attr
 		$a = shortcode_atts( array(
 			'prefix' => '',
-			'suffix' => __('views','cpstats-widget'),
+			'suffix' => __('views', 'cpstats'),
 			'days' => 0
 		), $atts );
 

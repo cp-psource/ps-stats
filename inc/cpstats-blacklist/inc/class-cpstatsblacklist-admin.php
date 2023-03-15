@@ -137,7 +137,7 @@ class CPStatsBlacklist_Admin extends CPStatsBlacklist {
 	 * @since 1.0.0
 	 */
 	public static function add_menu_page() {
-		$title = __( 'CP-Stats Filter', 'cpstats-blacklist' );
+		$title = __( 'CP-Stats Filter', 'cpstats' );
 		if ( self::$multisite ) {
 			add_submenu_page(
 				'settings.php',
@@ -209,7 +209,7 @@ class CPStatsBlacklist_Admin extends CPStatsBlacklist {
 		if ( CPSTATSBLACKLIST_BASE === $file && current_user_can( 'manage_options' ) ) {
 			array_unshift(
 				$links,
-				sprintf( '<a href="%s">%s</a>', esc_attr( add_query_arg( 'page', 'cpstats-blacklist', $base ) ), __( 'Settings', 'cpstats-blacklist' ) )
+				sprintf( '<a href="%s">%s</a>', esc_attr( add_query_arg( 'page', 'cpstats', $base ) ), __( 'Settings', 'cpstats' ) )
 			);
 		}
 
@@ -226,7 +226,7 @@ class CPStatsBlacklist_Admin extends CPStatsBlacklist {
 	public static function cleanup_database() {
 		// Check user permissions.
 		if ( ! current_user_can( 'manage_options' ) && ! ( defined( 'DOING_CRON' ) && DOING_CRON ) ) {
-			die( esc_html__( 'Are you sure you want to do this?', 'cpstats-blacklist' ) );
+			die( esc_html__( 'Are you sure you want to do this?', 'cpstats' ) );
 		}
 
 		if ( defined( 'DOING_CRON' ) && DOING_CRON ) {

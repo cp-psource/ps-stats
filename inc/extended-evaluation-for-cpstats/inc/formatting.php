@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
  */
 function eefcpstats_echo_export_button( $filename, $button_id = 'csv-export', $table_id = 'table-data' ) {
 	?>
-	<a class="page-title-action" href="#" id="<?php echo esc_html( $button_id ); ?>" role="button"><?php esc_html_e( 'Export', 'extended-evaluation-for-cpstats' ); ?></a>
+	<a class="page-title-action" href="#" id="<?php echo esc_html( $button_id ); ?>" role="button"><?php esc_html_e( 'Export', 'cpstats' ); ?></a>
 	<script type='text/javascript'>
 	jQuery(document).ready(function () {
 		jQuery("#<?php echo esc_html( $button_id ); ?>").click(function () {
@@ -45,32 +45,32 @@ function eefcpstats_echo_date_selection( $valid_start, $start, $valid_end, $end 
 	}
 	?>
 	<fieldset>
-		<legend><?php esc_html_e( 'Restrict date period: Please enter start and end date in the YYYY-MM-DD format', 'extended-evaluation-for-cpstats' ); ?></legend>
-		<label for="dateRange"><?php esc_html_e( 'Date range', 'extended-evaluation-for-cpstats' ); ?></label>
+		<legend><?php esc_html_e( 'Restrict date period: Please enter start and end date in the YYYY-MM-DD format', 'cpstats' ); ?></legend>
+		<label for="dateRange"><?php esc_html_e( 'Date range', 'cpstats' ); ?></label>
 		<select id="dateRange" onchange="eefcpstatsSelectDateRange()">
-			<option value="default"><?php esc_html_e( 'default (all the time)', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="lastYear"><?php esc_html_e( 'last year', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="lastWeek"><?php esc_html_e( 'last week', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="yesterday"><?php esc_html_e( 'yesterday', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="today"><?php esc_html_e( 'today', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="thisWeek"><?php esc_html_e( 'this week', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="last28days"><?php esc_html_e( 'last 28 days', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="lastMonth"><?php esc_html_e( 'last month', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="thisMonth"><?php esc_html_e( 'this month', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="thisYear"><?php esc_html_e( 'this year', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="1stQuarter"><?php esc_html_e( '1st quarter', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="2ndQuarter"><?php esc_html_e( '2nd quarter', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="3rdQuarter"><?php esc_html_e( '3rd quarter', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="4thQuarter"><?php esc_html_e( '4th quarter', 'extended-evaluation-for-cpstats' ); ?></option>
-			<option value="custom"><?php esc_html_e( 'custom', 'extended-evaluation-for-cpstats' ); ?></option>
+			<option value="default"><?php esc_html_e( 'default (all the time)', 'cpstats' ); ?></option>
+			<option value="lastYear"><?php esc_html_e( 'last year', 'cpstats' ); ?></option>
+			<option value="lastWeek"><?php esc_html_e( 'last week', 'cpstats' ); ?></option>
+			<option value="yesterday"><?php esc_html_e( 'yesterday', 'cpstats' ); ?></option>
+			<option value="today"><?php esc_html_e( 'today', 'cpstats' ); ?></option>
+			<option value="thisWeek"><?php esc_html_e( 'this week', 'cpstats' ); ?></option>
+			<option value="last28days"><?php esc_html_e( 'last 28 days', 'cpstats' ); ?></option>
+			<option value="lastMonth"><?php esc_html_e( 'last month', 'cpstats' ); ?></option>
+			<option value="thisMonth"><?php esc_html_e( 'this month', 'cpstats' ); ?></option>
+			<option value="thisYear"><?php esc_html_e( 'this year', 'cpstats' ); ?></option>
+			<option value="1stQuarter"><?php esc_html_e( '1st quarter', 'cpstats' ); ?></option>
+			<option value="2ndQuarter"><?php esc_html_e( '2nd quarter', 'cpstats' ); ?></option>
+			<option value="3rdQuarter"><?php esc_html_e( '3rd quarter', 'cpstats' ); ?></option>
+			<option value="4thQuarter"><?php esc_html_e( '4th quarter', 'cpstats' ); ?></option>
+			<option value="custom"><?php esc_html_e( 'custom', 'cpstats' ); ?></option>
 		</select>
-		<label for="start"><?php esc_html_e( 'Start date', 'extended-evaluation-for-cpstats' ); ?></label>
+		<label for="start"><?php esc_html_e( 'Start date', 'cpstats' ); ?></label>
 		<input id="start" name="start" type="date" value="<?php echo esc_html( $start ); ?>" oninput="eefcpstatsDateRangeChange()"
 			   pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
-		<label for="end"><?php esc_html_e( 'End date', 'extended-evaluation-for-cpstats' ); ?></label>
+		<label for="end"><?php esc_html_e( 'End date', 'cpstats' ); ?></label>
 		<input id="end" name="end" type="date" value="<?php echo esc_html( $end ); ?>" oninput="eefcpstatsDateRangeChange()"
 			   pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))">
-		<button type="submit" class="button-secondary"><?php esc_html_e( 'Select date period', 'extended-evaluation-for-cpstats' ); ?></button>
+		<button type="submit" class="button-secondary"><?php esc_html_e( 'Select date period', 'cpstats' ); ?></button>
 	</fieldset>
 	<?php
 }
@@ -83,7 +83,7 @@ function eefcpstats_echo_date_selection( $valid_start, $start, $valid_end, $end 
 function eefcpstats_echo_post_selection( $selected_post ) {
 	$posts = eefcpstats_get_post_urls();
 	?>
-	<label for="post"><?php esc_html_e( 'Post/Page', 'extended-evaluation-for-cpstats' ); ?></label>
+	<label for="post"><?php esc_html_e( 'Post/Page', 'cpstats' ); ?></label>
 	<input id="post" name="post" type="text" list="posts" value="<?php echo esc_attr( $selected_post ); ?>">
 	<datalist id="posts">
 		<?php foreach ( $posts as $post ) { ?>
@@ -137,8 +137,8 @@ function eefcpstats_get_date_period_string( $start, $end, $show, $formatted_date
 			$start = date_i18n( $format, strtotime( $start ) );
 			$end = date_i18n( $format, strtotime( $end ) );
 		}
-		return ' ' . __( 'from', 'extended-evaluation-for-cpstats' ) . ' ' . $start
-			. ' ' . __( 'to', 'extended-evaluation-for-cpstats' ) . ' ' . $end;
+		return ' ' . __( 'from', 'cpstats' ) . ' ' . $start
+			. ' ' . __( 'to', 'cpstats' ) . ' ' . $end;
 	}
 
 	return '';
@@ -228,10 +228,10 @@ function eefcpstats_get_number_for_csv( $string ) {
  */
 function eefcpstats_get_post_title_from_url( $url ) {
 	if ( '' === $url ) {
-		return __( 'all posts', 'extended-evaluation-for-cpstats' );
+		return __( 'all posts', 'cpstats' );
 	}
 	if ( '/' === $url ) {
-		return __( 'Home Page', 'extended-evaluation-for-cpstats' );
+		return __( 'Home Page', 'cpstats' );
 	}
 	$post_id = url_to_postid( $url );
 	return ( 0 === $post_id ) ? esc_url( $url ) : get_the_title( $post_id );
@@ -268,7 +268,7 @@ function eefcpstats_get_post_type_name_from_url( $url ) {
 function eefcpstats_get_post_type_name_and_title_from_url( $url ) {
 	return sprintf(
 		/* translators: 1: post type 2: post title or URL. */
-		__( 'for %1$s %2$s', 'extended-evaluation-for-cpstats' ),
+		__( 'for %1$s %2$s', 'cpstats' ),
 		eefcpstats_get_post_type_name_from_url( $url ),
 		eefcpstats_get_post_title_from_url( $url )
 	);

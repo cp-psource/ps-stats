@@ -165,7 +165,6 @@ class CPStats_Frontend extends CPStats {
 	 * @version  1.6.3
 	 *
 	 * @hook     boolean  cpstats__skip_tracking
-	 * @see      https://wordpress.org/plugins/cpstats/
 	 *
 	 * @return   boolean  $skip_hook  TRUE if NO tracking is desired
 	 */

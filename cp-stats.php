@@ -3,15 +3,21 @@
  * Plugin Name: CP-Stats
  * Description: Compact, easy-to-use and privacy-compliant stats plugin for ClassicPress.
  * Text Domain: cpstats
- * Author:      pluginkollektiv
- * Author URI:  https://pluginkollektiv.org/
- * Plugin URI:  https://cpstats.pluginkollektiv.org/
+ * Author:      DerN3rd
+ * Author URI:  https://n3rds.work
+ * Plugin URI:  https://n3rds.work/
  * License:     GPLv3 or later
  * Version:     1.8.4
  *
  * @package ClassicPress
  */
-
+require 'psource/psource-plugin-update/psource-plugin-updater.php';
+use Psource\PluginUpdateChecker\v5\PucFactory;
+$MyUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://n3rds.work//wp-update-server/?action=get_metadata&slug=cp-stats', 
+	__FILE__, 
+	'cp-stats' 
+);
 /* Quit */
 defined( 'ABSPATH' ) || exit;
 

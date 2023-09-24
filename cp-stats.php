@@ -8,11 +8,11 @@
  * Plugin URI:  https://n3rds.work/
  * License:     GPLv3 or later
  * Version:     1.8.4
- * Text Domain: cpstats
- * Domain Path: /languages
+ * Domain Path: languages
  *
  * @package ClassicPress
  */
+
 require 'psource/psource-plugin-update/psource-plugin-updater.php';
 use Psource\PluginUpdateChecker\v5\PucFactory;
 $MyUpdateChecker = PucFactory::buildUpdateChecker(
@@ -111,4 +111,10 @@ add_action( 'plugins_loaded', 'load_cpstats_blacklist' );
 function load_extended_evaluation_for_cpstats() {
 	require_once( plugin_dir_path( __FILE__ ) . 'inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php' );
 }
+
+function load_cpstats_textdomain() {
+    load_plugin_textdomain( 'cpstats', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'init', 'load_cpstats_textdomain' );
+
 add_action( 'plugins_loaded', 'load_extended_evaluation_for_cpstats' );

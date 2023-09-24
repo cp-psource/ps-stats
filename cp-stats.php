@@ -1,13 +1,15 @@
 <?php
 /**
  * Plugin Name: CP-Stats
- * Description: Compact, easy-to-use and privacy-compliant stats plugin for ClassicPress.
+ * Description: Kompaktes, benutzerfreundliches und datenschutzkonformes Statistik-Plugin für ClassicPress.
  * Text Domain: cpstats
  * Author:      DerN3rd
  * Author URI:  https://n3rds.work
  * Plugin URI:  https://n3rds.work/
  * License:     GPLv3 or later
  * Version:     1.8.4
+ * Text Domain: cpstats
+ * Domain Path: /languages
  *
  * @package ClassicPress
  */

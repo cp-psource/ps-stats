@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CP-Stats\n"
-"POT-Creation-Date: 2023-09-24 15:42+0200\n"
-"PO-Revision-Date: 2023-09-24 15:43+0200\n"
+"POT-Creation-Date: 2023-09-24 15:44+0200\n"
+"PO-Revision-Date: 2023-09-24 15:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: de_DE\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: inc/class-cpstats-backend.php:42 inc/class-cpstats-settings.php:369
 #: views/widget-back.php:50
 msgid "Donate"
-msgstr "Spenden"
+msgstr "Dona"
 
 #: inc/class-cpstats-backend.php:43 inc/class-cpstats-settings.php:370
 #: views/widget-back.php:51
@@ -34,147 +34,169 @@ msgstr "https://wordpress.org/support/plugin/cpstats"
 #: inc/class-cpstats-backend.php:43 inc/class-cpstats-settings.php:370
 #: views/widget-back.php:51
 msgid "Support"
-msgstr "Support"
+msgstr "Supporto"
 
 #: inc/class-cpstats-backend.php:76
 #: inc/cpstats-blacklist/inc/class-cpstatsblacklist-admin.php:212
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Impostazioni"
 
 #: inc/class-cpstats-dashboard.php:146
 msgid "Pageview"
-msgstr "Besuche"
+msgstr "Pagine viste"
 
 #: inc/class-cpstats-dashboard.php:147
 msgid "Pageviews"
-msgstr "Seitenaufrufe"
+msgstr "Visualizzazioni pagine"
 
 #: inc/class-cpstats-settings.php:32
 msgid "Global settings"
-msgstr "Globale Einstellungen"
+msgstr "Impostazioni globali"
 
 #: inc/class-cpstats-settings.php:38
+#, fuzzy
 msgid "Period of data saving"
-msgstr "Speicherzeitraum"
+msgstr "Periodo di salvataggio dei dati"
 
 #: inc/class-cpstats-settings.php:46
+#, fuzzy
 msgid "Tracking method"
-msgstr "Tracking Methode"
+msgstr "Metodo di tracciamento"
 
 #: inc/class-cpstats-settings.php:56
 msgid "Dashboard Widget"
-msgstr "Dashboard Widget"
+msgstr "Widget Dashboard"
 
 #: inc/class-cpstats-settings.php:62 views/widget-back.php:30
+#, fuzzy
 msgid "Period of data display in Dashboard"
-msgstr "Anzeigedauer im Dashboard"
+msgstr "Periodo di visualizzazione dei dati nel Dashboard"
 
 #: inc/class-cpstats-settings.php:70 views/widget-back.php:35
+#, fuzzy
 msgid "Number of entries in top lists"
-msgstr "Anzahl Einträge in TOP-Listen"
+msgstr "Numero di voci nelle top list"
 
 #: inc/class-cpstats-settings.php:78
+#, fuzzy
 msgid "Top lists only for today"
-msgstr "Nur heutige TOP-Listen"
+msgstr "Top list solo per oggi"
 
 #: inc/class-cpstats-settings.php:86 views/widget-back.php:43
+#, fuzzy
 msgid "Show totals"
-msgstr "Gesamtwerte anzeigen"
+msgstr "Mostra i totali"
 
 #: inc/class-cpstats-settings.php:96
+#, fuzzy
 msgid "Skip tracking for ..."
-msgstr "Tracking überspringen"
+msgstr "Salta il tracciamento per ..."
 
 #: inc/class-cpstats-settings.php:102
+#, fuzzy
 msgid "Disallowed referrers"
-msgstr "Unzulässige Referrer"
+msgstr "Referenti non ammessi"
 
 #: inc/class-cpstats-settings.php:110
 msgid "Logged in users"
-msgstr "Angemeldete Benutzer"
+msgstr "Utenti connessi"
 
 #: inc/class-cpstats-settings.php:126 inc/class-cpstats-settings.php:188
 #: views/widget-back.php:29
 msgid "days"
-msgstr "Tage"
+msgstr "giorni"
 
 #: inc/class-cpstats-settings.php:127 inc/class-cpstats-settings.php:189
 #: inc/class-cpstats-settings.php:201 inc/class-cpstats-settings.php:213
 #: inc/class-cpstats-settings.php:225 inc/class-cpstats-settings.php:250
 #: inc/class-cpstats-settings.php:263
 msgid "Default"
-msgstr "Standard"
+msgstr "Predefinito"
 
 #: inc/class-cpstats-settings.php:139
+#, fuzzy
 msgid "Default tracking"
-msgstr "Standard Tracking"
+msgstr "Tracciamento predefinito"
 
 #: inc/class-cpstats-settings.php:141
+#, fuzzy
 msgid "JavaScript based tracking with nonce check"
-msgstr "JavaScript mit Nonce Prüfung"
+msgstr "Tracciamento basato su JavaScript con controllo nonce"
 
 #: inc/class-cpstats-settings.php:143
+#, fuzzy
 msgid "JavaScript based tracking without nonce check"
-msgstr "JavaScript ohne Nonce Prüfung"
+msgstr "Tracciamento basato su JavaScript senza controllo nonce"
 
 #: inc/class-cpstats-settings.php:146
+#, fuzzy
 msgid ""
 "JavaScript based tracking is strongly recommended if caching or AMP is in "
 "use."
 msgstr ""
-"JavaScript sollte bei Verwendung von Caching oder AMP verwendet werden."
+"Il tracciamento basato su JavaScript è fortemente consigliato se si utilizza "
+"la cache o AMP."
 
 #: inc/class-cpstats-settings.php:147
+#, fuzzy
 msgid ""
 "Disable the nonce check if the caching time is longer than the nonce time or "
 "you miss views due to 403 Forbidden errors."
 msgstr ""
-"Wenn die Cache Zeit länger als die Nonce Gültigkeitsdauer ist, oder Aufrufe "
-"aufgrund 403 Fehlern nicht gezählt werden, dann sollte die Nonce Prüfung "
-"deaktiviert werden."
+"Disattivare il controllo del nonce se il tempo di cache è superiore al tempo "
+"del nonce o se si perdono visualizzazioni a causa di errori 403 Forbidden."
 
 #: inc/class-cpstats-settings.php:175
+#, fuzzy
 msgid "The following options affect the admin dashboard widget."
-msgstr " "
+msgstr ""
+"Le seguenti opzioni influiscono sul widget della plancia di amministrazione."
 
 #: inc/class-cpstats-settings.php:213 inc/class-cpstats-settings.php:225
 #: inc/class-cpstats-settings.php:250
 msgid "No"
-msgstr "Nein"
+msgstr "No"
 
 #: inc/class-cpstats-settings.php:237
+#, fuzzy
 msgid ""
 "The following options define cases in which a view will <strong>not</strong> "
 "be tracked."
-msgstr " "
+msgstr ""
+"Le seguenti opzioni definiscono i casi in cui una vista <strong>non</strong> "
+"viene tracciata."
 
 #: inc/class-cpstats-settings.php:251
+#, fuzzy
 msgid ""
 "Enabling this option excludes any views with referrers listed in the list of "
 "disallowed comment keys."
 msgstr ""
-"Alle Aufrufe, die Referrer aus der Liste unzulässiger Kommentarschlüssel "
-"enthalten, sind vom Tracking ausgeschlossen."
+"L'attivazione di questa opzione esclude tutte le viste con referenti "
+"elencati nell'elenco delle chiavi di commento non consentite."
 
 #: inc/class-cpstats-settings.php:263
 msgid "Yes"
-msgstr "Ja"
+msgstr "Sì"
 
 #: inc/class-cpstats-settings.php:264
+#, fuzzy
 msgid ""
 "Enabling this option excludes any views of logged-in users from tracking."
-msgstr "&nbsp;"
+msgstr ""
+"L'attivazione di questa opzione esclude dal tracciamento le visualizzazioni "
+"degli utenti connessi."
 
 #. Plugin Name of the plugin/theme
 #: inc/class-cpstats-settings.php:342 inc/class-cpstats-settings.php:343
 #, fuzzy
 msgid "CP-Stats"
-msgstr "CP-Stats"
+msgstr "Statistiche CP"
 
 #: inc/class-cpstats-settings.php:359
 #, fuzzy
 msgid "CPStats Settings"
-msgstr "CPStats Einstellungen"
+msgstr "Impostazioni di CPStats"
 
 #: inc/class-cpstats-settings.php:368
 #, fuzzy
@@ -183,56 +205,58 @@ msgstr "https://wordpress.org/plugins/cpstats/"
 
 #: inc/class-cpstats-settings.php:368 views/widget-back.php:49
 msgid "Documentation"
-msgstr "Dokumentation"
+msgstr "Documentazione"
 
 #: inc/cpstats-blacklist/inc/class-cpstatsblacklist-admin.php:140
 #, fuzzy
 msgid "CP-Stats Filter"
-msgstr "CP-Stats Filter"
+msgstr "Filtro CP-Stats"
 
 #: inc/cpstats-blacklist/inc/class-cpstatsblacklist-admin.php:229
 #: inc/cpstats-blacklist/views/settings-page.php:24
 msgid "Are you sure you want to do this?"
-msgstr "Sind Sie sicher, dass Sie das tun möchten?"
+msgstr "Sei sicuro di volerlo fare?"
 
 #: inc/cpstats-blacklist/views/settings-page.php:152
+#, fuzzy
 msgid "Some URLs are invalid and have been sanitized."
-msgstr "Einige URLs sind ungültig und wurden bereinigt."
+msgstr "Alcuni URL non sono validi e sono stati sanificati."
 
 #: inc/cpstats-blacklist/views/settings-page.php:155
 #, fuzzy
 msgid "Some regular expressions are invalid:"
-msgstr "Einige reguläre Ausdrücke sind ungültig:"
+msgstr "Alcune espressioni regolari non sono valide:"
 
 #. translators: List of invalid IP addresses (comma separated).
 #: inc/cpstats-blacklist/views/settings-page.php:159
 #, fuzzy, php-format
 msgid "Some IPs are invalid: %s"
-msgstr "Einige IPs sind ungültig: %s"
+msgstr "Alcuni IP non sono validi: %s"
 
 #: inc/cpstats-blacklist/views/settings-page.php:162
 msgid "Settings updated successfully."
-msgstr "Die Einstellungen wurden aktualisiert."
+msgstr "Impostazioni aggiornate correttamente."
 
 #: inc/cpstats-blacklist/views/settings-page.php:176
 #, fuzzy
 msgid "CPStats Filter"
-msgstr "CPStats Filter"
+msgstr "Filtro CPStats"
 
 #: inc/cpstats-blacklist/views/settings-page.php:180
 #, fuzzy
 msgid "CPStats plugin is not active."
-msgstr "Das CPStats-Plugin ist nicht aktiv."
+msgstr "Il plugin CPStats non è attivo."
 
 #: inc/cpstats-blacklist/views/settings-page.php:189
 #, fuzzy
 msgid "Settings have not been saved yet."
-msgstr "Die Einstellungen wurden noch nicht gespeichert."
+msgstr "Le impostazioni non sono ancora state salvate."
 
 #: inc/cpstats-blacklist/views/settings-page.php:200
 #: inc/cpstats-blacklist/views/settings-page.php:262
+#, fuzzy
 msgid "Referer filter"
-msgstr "Referrer Filter"
+msgstr "Filtro referer"
 
 #: inc/cpstats-blacklist/views/settings-page.php:207
 #: inc/cpstats-blacklist/views/settings-page.php:287
@@ -240,63 +264,71 @@ msgstr "Referrer Filter"
 #: inc/cpstats-blacklist/views/settings-page.php:411
 #, fuzzy
 msgid "Activate live filter"
-msgstr "Aktiviere den Live-Filter"
+msgstr "Attivare il filtro vivo"
 
 #: inc/cpstats-blacklist/views/settings-page.php:215
 #: inc/cpstats-blacklist/views/settings-page.php:295
 #: inc/cpstats-blacklist/views/settings-page.php:376
 #: inc/cpstats-blacklist/views/settings-page.php:418
+#, fuzzy
 msgid "Filter at time of tracking, before anything is stored"
-msgstr "Zum Zeitpunkt des Trackings filtern"
+msgstr ""
+"Filtrare al momento del tracciamento, prima che tutto venga memorizzato"
 
 #: inc/cpstats-blacklist/views/settings-page.php:222
 #: inc/cpstats-blacklist/views/settings-page.php:302
+#, fuzzy
 msgid "CronJob execution"
-msgstr "CronJob Ausführung"
+msgstr "Esecuzione di CronJob"
 
 #: inc/cpstats-blacklist/views/settings-page.php:228
+#, fuzzy
 msgid "Periodically clean up database in background"
-msgstr "Datenbank periodisch im Hintergrund bereinigen"
+msgstr "Pulizia periodica del database in background"
 
 #: inc/cpstats-blacklist/views/settings-page.php:233
 #: inc/cpstats-blacklist/views/settings-page.php:316
 #: inc/cpstats-blacklist/views/settings-page.php:426
+#, fuzzy
 msgid "Matching method"
-msgstr "Abgleichmethode"
+msgstr "Metodo di abbinamento"
 
 #: inc/cpstats-blacklist/views/settings-page.php:238
 #: inc/cpstats-blacklist/views/settings-page.php:252
 msgid "Domain"
-msgstr "Domain"
+msgstr "Dominio"
 
 #: inc/cpstats-blacklist/views/settings-page.php:241
 #: inc/cpstats-blacklist/views/settings-page.php:254
 #: inc/cpstats-blacklist/views/settings-page.php:434
 #: inc/cpstats-blacklist/views/settings-page.php:447
 msgid "Keyword"
-msgstr "Suchbegriff"
+msgstr "Parola chiave"
 
 #: inc/cpstats-blacklist/views/settings-page.php:244
 #: inc/cpstats-blacklist/views/settings-page.php:325
 #: inc/cpstats-blacklist/views/settings-page.php:437
+#, fuzzy
 msgid "RegEx case-sensitive"
-msgstr "RegEx (Groß-/Kleinschreibung beachten)"
+msgstr "RegEx sensibile alle maiuscole e alle minuscole"
 
 #: inc/cpstats-blacklist/views/settings-page.php:247
 #: inc/cpstats-blacklist/views/settings-page.php:328
 #: inc/cpstats-blacklist/views/settings-page.php:440
+#, fuzzy
 msgid "RegEx case-insensitive"
-msgstr "RegEx"
+msgstr "RegEx senza distinzione tra maiuscole e minuscole"
 
 #: inc/cpstats-blacklist/views/settings-page.php:252
+#, fuzzy
 msgid "Match given domain including subdomains"
-msgstr "Angegebene Domain einschließlich Subdomains abgleichen"
+msgstr "Corrisponde al dominio dato, compresi i sottodomini"
 
 #: inc/cpstats-blacklist/views/settings-page.php:254
 #: inc/cpstats-blacklist/views/settings-page.php:447
+#, fuzzy
 msgid "Match every referer that contains one of the keywords"
-msgstr ""
-"Jeder Referrer, der eines der Schlüsselwörter enthält, wird abgeglichen"
+msgstr "Corrisponde a ogni referente che contiene una delle parole chiave"
 
 #: inc/cpstats-blacklist/views/settings-page.php:256
 #: inc/cpstats-blacklist/views/settings-page.php:335
@@ -306,179 +338,203 @@ msgid "RegEx"
 msgstr "RegEx"
 
 #: inc/cpstats-blacklist/views/settings-page.php:256
+#, fuzzy
 msgid "Match referer by regular expression"
-msgstr "Referrer mit regulärem Ausdruck abgleichen"
+msgstr "Corrispondenza del referente tramite espressione regolare"
 
 #: inc/cpstats-blacklist/views/settings-page.php:273
+#, fuzzy
 msgid "Add one domain (without subdomains) each line, e.g. example.com"
-msgstr "Eine Domain (ohne Subdomains) pro Zeile"
+msgstr ""
+"Aggiungete un dominio (senza sottodomini) per ogni riga, ad esempio example."
+"com"
 
 #: inc/cpstats-blacklist/views/settings-page.php:280
 #: inc/cpstats-blacklist/views/settings-page.php:342
 #, fuzzy
 msgid "Target filter"
-msgstr "Zielfilter"
+msgstr "Filtro target"
 
 #: inc/cpstats-blacklist/views/settings-page.php:309
+#, fuzzy
 msgid "Clean database periodically in background"
-msgstr "Datenbank periodisch im Hintergrund bereinigen"
+msgstr "Pulisce periodicamente il database in background"
 
 #: inc/cpstats-blacklist/views/settings-page.php:322
 #: inc/cpstats-blacklist/views/settings-page.php:333
 #: inc/cpstats-blacklist/views/settings-page.php:431
 #: inc/cpstats-blacklist/views/settings-page.php:445
 msgid "Exact"
-msgstr "Genau"
+msgstr "Esatto"
 
 #: inc/cpstats-blacklist/views/settings-page.php:333
+#, fuzzy
 msgid "Match only given targets"
-msgstr "Nur vorgegebene Ziele abgleichen"
+msgstr "Corrisponde solo a determinati obiettivi"
 
 #: inc/cpstats-blacklist/views/settings-page.php:335
+#, fuzzy
 msgid "Match target by regular expression"
-msgstr "Referrer mit regulärem Ausdruck abgleichen"
+msgstr "Corrisponde alla destinazione tramite espressione regolare"
 
 #: inc/cpstats-blacklist/views/settings-page.php:355
+#, fuzzy
 msgid "Add one target URL each line, e.g."
-msgstr "Eine Ziel-URL pro Zeile"
+msgstr "Aggiungere un URL di destinazione per ogni riga, ad esempio"
 
 #: inc/cpstats-blacklist/views/settings-page.php:362
 #: inc/cpstats-blacklist/views/settings-page.php:384
 #, fuzzy
 msgid "IP filter"
-msgstr "IP-Filter"
+msgstr "Filtro IP"
 
 #: inc/cpstats-blacklist/views/settings-page.php:378
+#, fuzzy
 msgid ""
 "Cron execution is not possible for IP filter, because IP addresses are not "
 "stored."
 msgstr ""
-"Cron Ausführung für IP-Filter ist nicht möglich, weil IP-Adressen nicht "
-"gespeichert werden."
+"L'esecuzione di Cron non è possibile per il filtro IP, poiché gli indirizzi "
+"IP non vengono memorizzati."
 
 #: inc/cpstats-blacklist/views/settings-page.php:396
+#, fuzzy
 msgid "Add one IP address or range per line, e.g."
-msgstr "Eine IP-Adresse/Bereich pro Zeile"
+msgstr "Aggiungere un indirizzo IP o un intervallo per riga, ad es."
 
 #: inc/cpstats-blacklist/views/settings-page.php:404
 #: inc/cpstats-blacklist/views/settings-page.php:455
+#, fuzzy
 msgid "User agent filter"
-msgstr "User Agent Filter"
+msgstr "Filtro agente utente"
 
 #: inc/cpstats-blacklist/views/settings-page.php:420
+#, fuzzy
 msgid ""
 "Cron execution is not possible for user agent filter, because the user agent "
 "is stored."
 msgstr ""
-"Cron Ausführung für User Agent Filter ist nicht möglich, da der verwendete "
-"User Agent nicht gespeichert wird."
+"L'esecuzione di Cron non è possibile per il filtro dell'agente utente, "
+"perché l'agente utente è memorizzato."
 
 #: inc/cpstats-blacklist/views/settings-page.php:445
+#, fuzzy
 msgid "Match only given user agents"
-msgstr "Nur vorgegebene User Agents abgleichen"
+msgstr "Corrisponde solo a determinati agenti utente"
 
 #: inc/cpstats-blacklist/views/settings-page.php:449
+#, fuzzy
 msgid "Match user agent by regular expression"
-msgstr "User Agents mit regulärem Ausdruck abgleichen"
+msgstr "Corrispondenza dell'agente utente tramite espressione regolare"
 
 #: inc/cpstats-blacklist/views/settings-page.php:467
+#, fuzzy
 msgid "Add one user agent string per line, e.g."
-msgstr "Einen User Agent pro Zeile, z. B."
+msgstr "Aggiungere una stringa di user agent per riga, ad esempio"
 
 #: inc/cpstats-blacklist/views/settings-page.php:476
 msgid "Save Changes"
-msgstr "Änderungen speichern"
+msgstr "Salva modifiche"
 
 #: inc/cpstats-blacklist/views/settings-page.php:479
+#, fuzzy
 msgid "CleanUp Database"
-msgstr "Datenbank bereinigen"
+msgstr "Database CleanUp"
 
 #: inc/cpstats-blacklist/views/settings-page.php:483
+#, fuzzy
 msgid ""
 "Applies referer and target filter (even if disabled) to data stored in "
 "database."
 msgstr ""
-"Wendet Referrer und Zielfilter auf die gespeicherte Daten in der Datenbank "
-"an."
+"Applica il filtro referer e target (anche se disattivato) ai dati "
+"memorizzati nel database."
 
 #: inc/cpstats-blacklist/views/settings-page.php:484
+#, fuzzy
 msgid "This cannot be undone!"
-msgstr "Kann nicht ruckgängig gemacht werden!"
+msgstr "Questo non può essere annullato!"
 
 #: inc/cpstats-widget/CPStats_Posts.class.php:74
 msgid "Frontpage"
-msgstr "Startseite"
+msgstr "Home page"
 
 #: inc/cpstats-widget/CPStats_Posts.class.php:176
 #: inc/cpstats-widget/CPStats_Posts.class.php:196
 msgid "views"
-msgstr "Ansichten"
+msgstr "visualizzazioni"
 
 #: inc/cpstats-widget/cpstats-widget.php:21
 #, fuzzy
 msgid "Shows the most popular content. Based on CP-Stats Plugin."
-msgstr "Zeigt die beliebtesten Inhalte an. Basiert auf dem CP-Stats Plugin."
+msgstr "Mostra i contenuti più popolari. Basato sul plugin CP-Stats."
 
 #: inc/cpstats-widget/cpstats-widget.php:24
 #, fuzzy
 msgid "CP-Stats Widget"
-msgstr "CP-Stats Widget"
+msgstr "Widget CP-Stats"
 
 #: inc/cpstats-widget/cpstats-widget.php:43
+#, fuzzy
 msgid "%VIEWS% views"
-msgstr "%VIEWS% Aufrufe"
+msgstr "%VIEWS% visualizzazioni"
 
 #: inc/cpstats-widget/cpstats-widget.php:55
 msgid "Widget title:"
-msgstr "Widget Titel:"
+msgstr "Titolo Widget:"
 
 #: inc/cpstats-widget/cpstats-widget.php:60
 msgid "Post type:"
-msgstr "Beitragstyp:"
+msgstr "Tipo di Post:"
 
 #: inc/cpstats-widget/cpstats-widget.php:62
+#, fuzzy
 msgid "posts + pages"
-msgstr "Beiträge und Seiten"
+msgstr "messaggi + pagine"
 
 #: inc/cpstats-widget/cpstats-widget.php:72
 msgid "Post category:"
-msgstr "Beitrag Kategorie:"
+msgstr "Categoria Articolo:"
 
 #: inc/cpstats-widget/cpstats-widget.php:84
 msgid "Last "
-msgstr "Letzte "
+msgstr "Ultimo "
 
 #: inc/cpstats-widget/cpstats-widget.php:86
+#, fuzzy
 msgid " days. (If enough stats exists)"
-msgstr " Tage. (Wenn ausreichend Daten vorhanden sind)"
+msgstr " giorni. (Se esiste un numero sufficiente di statistiche)"
 
 #: inc/cpstats-widget/cpstats-widget.php:87
+#, fuzzy
 msgid "0 days = show all items"
-msgstr "0 Tage = Alles anzeigen"
+msgstr "0 giorni = mostra tutti gli articoli"
 
 #: inc/cpstats-widget/cpstats-widget.php:90
 #, fuzzy
 msgid "Amounts:"
-msgstr "Beträge:"
+msgstr "Importi:"
 
 #: inc/cpstats-widget/cpstats-widget.php:97
+#, fuzzy
 msgid "Show view counter?"
-msgstr "Zähler anzeigen?"
+msgstr "Mostrare il contatore delle visualizzazioni?"
 
 #: inc/cpstats-widget/cpstats-widget.php:100
 msgid "Custom text:"
-msgstr "Benutzerdefinierter Text:"
+msgstr "Testo personalizzato:"
 
 #: inc/cpstats-widget/cpstats-widget.php:103
+#, fuzzy
 msgid "%VIEWS% = amount of views"
-msgstr "%VIEWS% = Anzahl Aufrufe"
+msgstr "%VIEWS% = quantità di visualizzazioni"
 
 #: inc/cpstats-widget/cpstats-widget.php:133
-#, fuzzy
 msgid "There are no posts yet."
-msgstr "Es sind noch keine Beiträge vorhanden."
+msgstr "Non ci sono articoli al momento."
 
 #: inc/cpstats-widget/cpstats-widget.php:173
+#, fuzzy
 msgid "%VIEWS%"
 msgstr "%VIEWS%"
 
@@ -488,8 +544,8 @@ msgid ""
 "Please install <a target=\"_blank\" href=\"http://wordpress.org/plugins/"
 "cpstats/\">CPStats</a> plugin first."
 msgstr ""
-"Bitte installiere zuerst das <a target=\"_blank\" href=\"http://wordpress."
-"org/plugins/cpstats/\">CPStats-Plugin</a>."
+"Installare prima il plugin <a target=\"_blank\" href=\"http://wordpress.org/"
+"plugins/cpstats/\">CPStats</a>."
 
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:30
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:69
@@ -499,38 +555,40 @@ msgid ""
 "installed and activated! Please install and activate CP-Stats before "
 "activating this plugin!"
 msgstr ""
-"CP-Stats - Erweiterte Auswertung benötigt das Plugin CP-Stats, das "
-"installiert und aktiviert sein muss! Bitte installiere und aktiviere CP-"
-"Stats, bevor du dieses Plugin aktivierst!"
+"CP-Stats - Extended Evaluation richiede il plugin CP-Stats che deve essere "
+"installato e attivato! Installare e attivare CP-Stats prima di attivare "
+"questo plugin!"
 
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:35
 #, fuzzy
 msgid "Activation Error: CP-Stats – Extended Evaluation requires CP-Stats!"
 msgstr ""
-"Aktivierungsfehler: CP-Stats - Erweiterte Auswertung erfordert CP-Stats!"
+"Errore di attivazione: CP-Stats - Extended Evaluation richiede CP-Stats!"
 
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:126
+#, fuzzy
 msgid "View"
-msgstr "Anzeigen"
+msgstr "Vedi"
 
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:127
 #: inc/extended-evaluation-for-cpstats/views/content.php:126
 #: inc/extended-evaluation-for-cpstats/views/content.php:198
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:107
+#, fuzzy
 msgid "Views"
-msgstr "Ansichten"
+msgstr "Visualizzazioni"
 
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:176
 #: inc/extended-evaluation-for-cpstats/views/content.php:43
 #, fuzzy
 msgid "CP-Stats – Extended Evaluation"
-msgstr "CP-Stats - Erweiterte Auswertung"
+msgstr "CP-Stats - Valutazione estesa"
 
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:186
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:188
 #: inc/extended-evaluation-for-cpstats/views/content.php:44
 msgid "Content"
-msgstr "Inhalt"
+msgstr "Contenuto"
 
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:187
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:196
@@ -538,140 +596,152 @@ msgstr "Inhalt"
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:49
 #, fuzzy
 msgid "CPStats – Extended Evaluation"
-msgstr "CPStats - Erweiterte Auswertung"
+msgstr "CPStats - Valutazione estesa"
 
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:195
 #: inc/extended-evaluation-for-cpstats/extended-evaluation-for-cpstats.php:197
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:43
 msgid "Referrers"
-msgstr "Referrer"
+msgstr "Referenti"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:20
 msgid "Export"
-msgstr "Export"
+msgstr "Esporta"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:48
+#, fuzzy
 msgid ""
 "Restrict date period: Please enter start and end date in the YYYY-MM-DD "
 "format"
 msgstr ""
-"Zeitraum eingrenzen: Start- und Enddatum im Format JJJJ-MM-TT eingeben."
+"Limitare il periodo della data: Inserire la data di inizio e di fine nel "
+"formato AAAA-MM-GG"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:49
+#, fuzzy
 msgid "Date range"
-msgstr "Zeitraum"
+msgstr "Intervallo data"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:51
+#, fuzzy
 msgid "default (all the time)"
-msgstr "Standard (Gesamter Zeitraum)"
+msgstr "predefinito (sempre)"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:52
 msgid "last year"
-msgstr "letztes Jahr"
+msgstr "ultimo anno"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:53
 msgid "last week"
-msgstr "Letzte Woche"
+msgstr "ultima settimana"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:54
 msgid "yesterday"
-msgstr "gestern"
+msgstr "ieri"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:55
 #: views/widget-front.php:97
 msgid "today"
-msgstr "heute"
+msgstr "oggi"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:56
 msgid "this week"
-msgstr "diese Woche"
+msgstr "questa settimana"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:57
 msgid "last 28 days"
-msgstr "die letzten 28 Tage"
+msgstr "ultimi 28 giorni"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:58
 msgid "last month"
-msgstr "Letzter Monat"
+msgstr "ultimo mese"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:59
 msgid "this month"
-msgstr "diesen Monat"
+msgstr "questo mese"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:60
 msgid "this year"
-msgstr "dieses Jahr"
+msgstr "quest'anno"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:61
+#, fuzzy
 msgid "1st quarter"
-msgstr "1. Quartal"
+msgstr "1° trimestre"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:62
+#, fuzzy
 msgid "2nd quarter"
-msgstr "2. Quartal"
+msgstr "2° trimestre"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:63
+#, fuzzy
 msgid "3rd quarter"
-msgstr "3. Quartal"
+msgstr "3° trimestre"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:64
+#, fuzzy
 msgid "4th quarter"
-msgstr "4. Quartal"
+msgstr "4° trimestre"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:65
 msgid "custom"
-msgstr "Benutzerdefiniert"
+msgstr "personalizza"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:67
 msgid "Start date"
-msgstr "Startdatum"
+msgstr "Data di inizio"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:70
 msgid "End date"
-msgstr "Enddatum"
+msgstr "Data fine"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:73
+#, fuzzy
 msgid "Select date period"
-msgstr "Zeitraum auswählen"
+msgstr "Selezionare il periodo della data"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:86
 #: inc/extended-evaluation-for-cpstats/views/content.php:123
+#, fuzzy
 msgid "Post/Page"
-msgstr "Beitrag/Seite"
+msgstr "Post/pagina"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:140
 msgid "from"
-msgstr "von"
+msgstr "dal"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:141
 msgid "to"
-msgstr "bis"
+msgstr "a"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:231
 msgid "all posts"
-msgstr "alle Beiträge"
+msgstr "Tutti gli articoli"
 
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:234
 msgid "Home Page"
-msgstr "Startseite"
+msgstr "Home Page"
 
 #. translators: 1: post type 2: post title or URL.
 #: inc/extended-evaluation-for-cpstats/inc/formatting.php:271
 #, php-format
 msgid "for %1$s %2$s"
-msgstr "für %1$s %2$s"
+msgstr "per %1$s %2$s"
 
 #: inc/extended-evaluation-for-cpstats/views/content.php:37
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:34
+#, fuzzy
 msgid ""
 "No valid date period set. Please enter a valid start and a valid end date!"
 msgstr ""
-"Es wurde kein gültiger Zeitraum eingegeben. Gib ein gültiges Start- und "
-"Endedatum im richtigen Datumsformat ein!"
+"Non è stata impostata una data valida. Inserire una data di inizio e una di "
+"fine valide!"
 
 #: inc/extended-evaluation-for-cpstats/views/content.php:50
+#, fuzzy
 msgid "Popular Content and Post Types"
-msgstr "Beliebte Inhalte und Beitragstypen"
+msgstr "Contenuti e tipi di post più diffusi"
 
 #: inc/extended-evaluation-for-cpstats/views/content.php:53
 #: inc/extended-evaluation-for-cpstats/views/content.php:71
@@ -679,15 +749,16 @@ msgstr "Beliebte Inhalte und Beitragstypen"
 #: inc/extended-evaluation-for-cpstats/views/content.php:114
 #, fuzzy
 msgid "Most Popular Content"
-msgstr "Beliebteste Inhalte"
+msgstr "I contenuti più popolari"
 
 #: inc/extended-evaluation-for-cpstats/views/content.php:80
 #: inc/extended-evaluation-for-cpstats/views/content.php:184
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:68
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:66
 #: views/widget-front.php:20
+#, fuzzy
 msgid "No data available."
-msgstr "Keine Daten verfügbar."
+msgstr "Nessun dato disponibile."
 
 #: inc/extended-evaluation-for-cpstats/views/content.php:124
 #: inc/extended-evaluation-for-cpstats/views/content.php:197
@@ -696,113 +767,123 @@ msgstr "URL"
 
 #: inc/extended-evaluation-for-cpstats/views/content.php:125
 msgid "Post Type"
-msgstr "Beitragstyp"
+msgstr "Tipo di post"
 
 #: inc/extended-evaluation-for-cpstats/views/content.php:127
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:108
 #, fuzzy
 msgid "Proportion"
-msgstr "Anteil"
+msgstr "Proporzione"
 
 #: inc/extended-evaluation-for-cpstats/views/content.php:151
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:120
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:212
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:128
 msgid "Sum"
-msgstr "Summe"
+msgstr "Somma"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:43
 #, fuzzy
 msgid "Overview and Years"
-msgstr "Überblick und Jahre"
+msgstr "Panoramica e anni"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:45
 msgid "Overview"
-msgstr "Übersicht"
+msgstr "Panoramica"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:54
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:60
+#, fuzzy
 msgid ""
 "Per default the views of all posts are shown. To restrict the evaluation to "
 "one post/page, enter their path or name."
-msgstr "Standardmäßig werden alle Aufrufe angezeigt."
+msgstr ""
+"Per impostazione predefinita, vengono mostrate le visualizzazioni di tutti i "
+"post. Per limitare la valutazione a un post/pagina, inserire il percorso o "
+"il nome."
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:56
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:62
+#, fuzzy
 msgid "Select post/page"
-msgstr "Beitrag/Seite auswählen"
+msgstr "Selezionare il post/pagina"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:63
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:74
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:153
+#, fuzzy
 msgid "Monthly Views"
-msgstr "Monatliche Aufrufe"
+msgstr "Visualizzazioni mensili"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:79
+#, fuzzy
 msgid "Yearly Views"
-msgstr "Jährliche Aufrufe"
+msgstr "Visualizzazioni annuali"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:107
+#, fuzzy
 msgid "Monthly / Yearly Views"
-msgstr "Monatliche/Jährliche Seitenaufrufe"
+msgstr "Visualizzazioni mensili/annuali"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:116
 msgid "Year"
-msgstr "Jahr"
+msgstr "Anno"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:140
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:148
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:187
 msgid "Daily Views"
-msgstr "Tägliche Aufrufe"
+msgstr "Visualizzazioni quotidiane"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:218
 msgid "Average"
-msgstr "Durchschnittlich"
+msgstr "Media"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:224
 msgid "Minimum"
-msgstr "Minimum"
+msgstr "Minimo"
 
 #: inc/extended-evaluation-for-cpstats/views/dashboard.php:234
 msgid "Maximum"
-msgstr "Maximum"
+msgstr "Massimo"
 
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:50
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:77
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:96
+#, fuzzy
 msgid "Referrers from other websites"
-msgstr "Referrer anderer Websites"
+msgstr "Referenti da altri siti web"
 
 #: inc/extended-evaluation-for-cpstats/views/referrers.php:106
+#, fuzzy
 msgid "Referring Domain"
-msgstr "Referrer Domänen"
+msgstr "Dominio di riferimento"
 
 #: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:56
 msgid "View details"
-msgstr "Details anzeigen"
+msgstr "Vedi dettagli"
 
 #: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:79
 #, fuzzy, php-format
 msgid "Weitere Informationen zu %s"
-msgstr "Weitere Informationen zu %s"
+msgstr "Altre informazioni su %s"
 
 #: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:130
 #, fuzzy
 msgid "Auf neuere Version prüfen"
-msgstr "Auf neuere Version prüfen"
+msgstr "La nuova versione è da preferire"
 
 #: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:217
 #, fuzzy, php-format
 msgctxt "the plugin title"
 msgid "Keine neuere Version von %s im PSOURCE REPO gefunden."
-msgstr "Keine neuere Version von %s im PSOURCE REPO gefunden."
+msgstr "Non è stata creata una nuova versione di %s nel PSOURCE REPO."
 
 #: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:219
 #, fuzzy, php-format
 msgctxt "the plugin title"
 msgid "Im PSOURCE REPO ist eine <b>neuere Version von %s</b> verfügbar!."
-msgstr "Im PSOURCE REPO ist eine <b>neuere Version von %s</b> verfügbar!"
+msgstr "In PSOURCE REPO è disponibile una <b>nuova versione di %s</b>."
 
 #: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:221
 #, fuzzy, php-format
@@ -817,27 +898,29 @@ msgstr ""
 #: psource/psource-plugin-update/Puc/v5p0/Plugin/Ui.php:227
 #, fuzzy, php-format
 msgid "Unbekannter PSOURCE-UPDATTER-Status \"%s\""
-msgstr "Unbekannter PSOURCE-UPDATTER-Status \"%s\""
+msgstr "Stato PSOURCE-UPDATTER \"%s\" non funzionante"
 
 #: psource/psource-plugin-update/Puc/v5p0/Vcs/PluginUpdateChecker.php:98
 msgid "There is no changelog available."
-msgstr "Es steht kein Änderungsprotokoll zur Verfügung."
+msgstr "La cronologia degli aggiornamenti non è disponibile."
 
 #: views/widget-back.php:16
+#, fuzzy
 msgid "Open full settings page"
-msgstr "Einstellungen anzeigen"
+msgstr "Aprire la pagina delle impostazioni complete"
 
 #: views/widget-back.php:18
 msgid "All Settings"
-msgstr "Alle Einstellungen"
+msgstr "Tutte le impostazioni"
 
 #: views/widget-back.php:24
 msgid "Widget Settings"
-msgstr "Widget Einstellungen"
+msgstr "Impostazioni widget"
 
 #: views/widget-back.php:39
+#, fuzzy
 msgid "Entries in top lists only for today"
-msgstr "Einträge in heutige TOP-Listen"
+msgstr "Inserimenti in top list solo per oggi"
 
 #. Plugin URI of the plugin/theme
 #: views/widget-back.php:49
@@ -846,33 +929,33 @@ msgid "https://n3rds.work/"
 msgstr "https://n3rds.work/"
 
 #: views/widget-front.php:38
+#, fuzzy
 msgid "Top referers"
-msgstr "TOP Referrers"
+msgstr "I principali referenti"
 
 #: views/widget-front.php:63
+#, fuzzy
 msgid "Top targets"
-msgstr "TOP Ziele"
+msgstr "Obiettivi principali"
 
 #: views/widget-front.php:88
 msgid "Totals"
-msgstr "Summen"
+msgstr "Totali"
 
 #: views/widget-front.php:105
 msgid "since"
-msgstr "seit"
+msgstr "dal"
 
 #: views/widget-front.php:116
 msgid "Refresh"
-msgstr "Aktualisieren"
+msgstr "Aggiorna"
 
 #. Description of the plugin/theme
 #, fuzzy
 msgid ""
 "Kompaktes, benutzerfreundliches und datenschutzkonformes Statistik-Plugin "
 "für ClassicPress."
-msgstr ""
-"Kompaktes, benutzerfreundliches und datenschutzkonformes Statistik-Plugin "
-"für ClassicPress."
+msgstr "Un plug-in statistico per ClassicPress completo, semplice e sicuro."
 
 #. Author of the plugin/theme
 #, fuzzy

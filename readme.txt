@@ -1,4 +1,4 @@
-=== PS Broken Link Checker ===
+=== CP Stats ===
 * Contributors:      DerN3rd
 * Donate link:       https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
 * Tags:              analytics, dashboard, pageviews, privacy, statistics, stats, visits, web stats, widget
@@ -9,113 +9,53 @@
 * License:           GPLv3 or later
 * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
 
-Visitor statistics for ClassicPress with focus on data protection, transparency and clarity. Perfect as a widget in your ClassicPress Dashboard.
+Besucherstatistik für ClassicPress mit Fokus auf Datenschutz, Transparenz und Übersichtlichkeit. Perfekt als Widget in Deinem ClassicPress Dashboard.
 
 
-## Description ##
-CPStats provides a straightforward and compact access to the number of site views. It is privacy-friendly as it uses neither cookies nor a third party.
+## Beschreibung ##
+CPStats bietet einen einfachen und kompakten Zugriff auf die Anzahl der Seitenaufrufe. Es ist datenschutzfreundlich, da es weder Cookies noch eine dritte Partei verwendet.
 
-An interactive chart is followed by lists of the most common reference sources and target pages. The period of statistics and length of lists can be set directly in the dashboard widget.
+Auf ein interaktives Diagramm folgen Listen mit den häufigsten Verweisquellen und Zielseiten. Der Zeitraum der Statistik und die Länge der Listen können direkt im Dashboard-Widget eingestellt werden.
 
-### Data Privacy ###
-In direct comparison to statistics services such as *Google Analytics*, *ClassicPress.com Stats* and *Matomo (Piwik)* *CPStats* doesn't process and store personal data as e.g. IP addresses – *CPStats* counts site views, not visitors.
+###Datenschutz ###
+Im direkten Vergleich zu Statistikdiensten wie *Google Analytics*, *ClassicPress.com Stats* und *Matomo (Piwik)* verarbeitet und speichert *CPStats* keine personenbezogenen Daten wie z.B. IP-Adressen - *CPStats* zählt Seitenaufrufe, nicht Besucher.
 
-Absolute privacy compliance coupled with transparent procedures: A locally in ClassicPress created database table consists of only four fields (ID, date, source, target) and can be viewed at any time, cleaned up and cleared by the administrator.
+Absolute Datenschutzkonformität gepaart mit transparenten Verfahren: Eine lokal in ClassicPress angelegte Datenbanktabelle besteht aus nur vier Feldern (ID, Datum, Quelle, Ziel) und kann vom Administrator jederzeit eingesehen, bereinigt und gelöscht werden.
 
-Due to this tracking approach, CPStats is 100% compliant with GDPR and serves as an lightweight alternative to other tracking services.
+Durch diesen Tracking-Ansatz ist CPStats 100% konform mit GDPR und dient als leichtgewichtige Alternative zu anderen Tracking-Diensten.
 
-### Display of the widget ###
-The plugin configuration can be changed directly in the *CPStats* Widget on the dashboard by clicking the *Configure* link.
+### Anzeige des Widgets ###
+Die Konfiguration des Plugins kann direkt im *CPStats* Widget auf dem Dashboard über den Link *Konfigurieren* geändert werden.
 
-The amount of links shown in the *CPStats* Widget can be set as well as the option to only count views from today. Of course, older entries are not deleted when changing this setting.
+Die Anzahl der im *CPStats* Widget angezeigten Links kann ebenso eingestellt werden wie die Option, nur Aufrufe von heute zu zählen. Ältere Einträge werden bei der Änderung dieser Einstellung natürlich nicht gelöscht.
 
-The statistics for the dashboard widget are cached for four minutes.
+Die Statistiken für das Dashboard-Widget werden für vier Minuten zwischengespeichert.
 
-### Period of data saving ###
-*CPStats* stores the data only for a limited period (default: two weeks), longer intervals can be selected as option in the widget. Data which is older than the selected period is deleted by a daily cron job.
+### Zeitraum der Datenspeicherung ###
+*CPStats* speichert die Daten nur für einen begrenzten Zeitraum (Standard: zwei Wochen), längere Intervalle können als Option im Widget ausgewählt werden. Daten, die älter sind als der gewählte Zeitraum, werden durch einen täglichen Cron-Job gelöscht.
 
-An increase in the database volume can be expected because all statistic values are collected and managed in the local ClassicPress database (especially if you increase the period of data saving).
+Da alle statistischen Werte in der lokalen ClassicPress-Datenbank gesammelt und verwaltet werden, ist mit einer Erhöhung des Datenbankvolumens zu rechnen (insbesondere wenn Sie den Zeitraum der Datenspeicherung erhöhen).
 
-### JavaScript tracking for caching compatibility ###
-For compatibility with caching plugins like [Cachify](http://cachify.de) *CPStats* offers an optional switchable tracking via JavaScript. This function allows reliable count of cached blog pages.
+### JavaScript-Tracking für Caching-Kompatibilität ###
+Für die Kompatibilität mit Caching-Plugins wie [Cachify](http://cachify.de) bietet *CPStats* ein optional zuschaltbares Tracking via JavaScript. Diese Funktion ermöglicht eine zuverlässige Zählung der gecachten Blogseiten.
 
-For this to work correctly, the active theme has to call `wp_footer()`, typically in a file named `footer.php`.
+Damit dies korrekt funktioniert, muss das aktive Theme `wp_footer()` aufrufen, typischerweise in einer Datei namens `footer.php`.
 
-### Skip tracking for spam referrers ###
-The comment blacklist can be enabled to skip tracking for views with a referrer URL listed in comment blacklist, i. e. which considered as spam.
+### Tracking für Spam-Referrer überspringen ###
+Die Kommentar-Blacklist kann aktiviert werden, um das Tracking für Aufrufe zu überspringen, deren Referrer-URL in der Kommentar-Blacklist aufgeführt ist, d. h. die als Spam angesehen werden.
 
-### Support ###
-If you've problems or think you’ve found a bug (e.g. you’re experiencing unexpected behavior), please post at the [support forums](https://wordpress.org/support/plugin/cpstats).
+### Unterstützung ###
+Wenn Du Probleme hast oder glaubst, einen Fehler gefunden zu haben (z.B. ein unerwartetes Verhalten), poste es bitte in den [Support-Foren] (https://wordpress.org/support/plugin/cpstats).
 
 ### Contribute ###
-* Active development of this plugin is handled [on GitHub](https://github.com/pluginkollektiv/cpstats).
-* Pull requests for documented bugs are highly appreciated.
-* If you want to help us translate this plugin you can do so [on ClassicPress Translate](https://translate.wordpress.org/projects/wp-plugins/cpstats).
+* Die aktive Entwicklung dieses Plugins wird [auf GitHub](https://github.com/cp-psource/cp-stats) betrieben.
+* Pull Requests für dokumentierte Bugs sind sehr willkommen.
+* Wenn Du uns bei der Übersetzung dieses Plugins helfen willst, kannst Du dies [auf ClassicPress Translate](https://github.com/cp-psource/cp-stats/) tun.
 
-
-## Frequently Asked Questions ##
-
-### Which areas are excluded from counting? ###
-*CPStats* does not count the following views:
-
-* feeds
-* trackbacks
-* searches
-* previews
-* views by logged in users (unless tracking is activated via the settings page)
-* error pages
-* favicon (as of WP 5.4)
-* sitemap (as of WP 5.5)
-
-This behavior can be modified with the `cpstats__skip_tracking` hook.
-
-### Can further visitor data be recorded? ###
-Some plugin users want to capture additional visitor data, e.g. name of the device and resolution.
-*CPStats* counts exclusively page views and no visitors, the desired data acquisition is not a question.
-
-### How to change who can see the Dashboard widget? ###
-Per default only administrators can see the widget. This can be changed with the `cpstats__user_can_see_stats` hook.
-
-Example:
-`
-add_filter(
-    'cpstats__user_can_see_stats',
-    '__return_true'
-);
-`
-
-has to be added to the theme's `functions.php` and adapted to your needs. This example would allow all users to see the widget.
-
-Editing the configuration is still limited to users with `edit_dashboard` capability.
-
-### How to skip tracking for defined users or pages ###
-The conditions for tracking views can be customized according to page type and user capabilities by using the hook `cpstats__skip_tracking`.
-
-Example:
-`
-add_filter(
-    'cpstats__skip_tracking',
-    function() {
-        if ( condition ) {
-            return true;
-        }
-
-        return false;
-    }
-);
-`
-
-has to be added to the theme's `functions.php`. The condition has modified such that the method returns true if and only if the view should be ignored.
-
-### How to extend this plugin? ###
-
-* [CPStats - Extended Evaluation](https://wordpress.org/plugins/extended-evaluation-for-cpstats/) for a more detailed evaluation and export function
-* [CPStats Widget](https://wordpress.org/plugins/cpstats-widget/) to display most popular content
-* [CPStats Blacklist](https://wordpress.org/plugins/cpstats-blacklist/) to define a customized blacklist for referrer spam
 
 
 ## Changelog ##
-You can find the full changelog in [our GitHub repository](https://github.com/pluginkollektiv/cpstats/blob/master/CHANGELOG.md).
+You can find the full changelog in [our GitHub repository](https://github.com/cp-psource/cp-stats/blob/master/CHANGELOG.md).
 
 ### 1.8.4
 * Use same date retrieval for tracking and analysis (#227) (#232)
@@ -175,7 +115,7 @@ You can find the full changelog in [our GitHub repository](https://github.com/pl
 * Skip tracking for favicon.ico redirects (since WP 5.4) (#144)
 * Tested up to ClassicPress 5.4
 
-For the complete changelog, check out our [GitHub repository](https://github.com/pluginkollektiv/cpstats).
+For the complete changelog, check out our [GitHub repository](https://github.com/cp-psource/cp-stats).
 
 
 ## Upgrade Notice ##

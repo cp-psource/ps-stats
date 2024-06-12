@@ -5,7 +5,7 @@
  * Text Domain: cpstats
  * Author:      DerN3rd
  * Author URI:  https://n3rds.work
- * Plugin URI:  https://n3rds.work/
+ * Plugin URI:  https://cp-psource.github.io/cp-stats/
  * License:     GPLv3 or later
  * Version:     1.8.4
  * Domain Path: languages

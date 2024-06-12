@@ -46,7 +46,6 @@ class_exists( 'CPStats' ) || exit; ?>
 <?php wp_nonce_field( 'cpstats-dashboard' ); ?>
 
 <p class="meta-links">
-	<a href="<?php echo esc_url( __( 'https://n3rds.work/', 'cpstats' ) ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Documentation', 'cpstats' ); ?></a>
-	&bull; <a href="https://n3rds.work/piestingtalfunding/unterstuetze-unsere-psource-free-werke/" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Donate', 'cpstats' ); ?></a>
-	&bull; <a href="<?php echo esc_url( __( 'https://wordpress.org/support/plugin/cpstats', 'cpstats' ) ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Support', 'cpstats' ); ?></a>
+	<a href="<?php echo esc_url( __( 'https://github.com/cp-psource/cp-stats/wiki', 'cpstats' ) ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Dokumentation', 'cpstats' ); ?></a>
+	&bull; <a href="<?php echo esc_url( __( 'https://github.com/cp-psource/cp-stats/discussions', 'cpstats' ) ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Support', 'cpstats' ); ?></a>
 </p>

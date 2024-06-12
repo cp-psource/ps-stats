@@ -39,8 +39,8 @@ class CPStats_Backend {
 		return array_merge(
 			$input,
 			array(
-				'<a href="https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Donate', 'cpstats' ) . '</a>',
-				'<a href="' . esc_url( __( 'https://wordpress.org/support/plugin/cpstats', 'cpstats' ) ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'cpstats' ) . '</a>',
+				'<a href="https://github.com/cp-psource/cp-stats/wiki" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Dokumentation', 'cpstats' ) . '</a>',
+				'<a href="' . esc_url( __( 'https://github.com/cp-psource/cp-stats/discussions', 'cpstats' ) ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Support', 'cpstats' ) . '</a>',
 			)
 		);
 	}

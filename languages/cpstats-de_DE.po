@@ -20,11 +20,6 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: inc/class-cpstats-backend.php:42 inc/class-cpstats-settings.php:369
-#: views/widget-back.php:50
-msgid "Donate"
-msgstr "Spenden"
-
 #: inc/class-cpstats-backend.php:43 inc/class-cpstats-settings.php:370
 #: views/widget-back.php:51
 #, fuzzy

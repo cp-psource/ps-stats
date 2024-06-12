@@ -1,6 +1,5 @@
 === CP Stats ===
 * Contributors:      DerN3rd
-* Donate link:       https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/
 * Tags:              analytics, dashboard, pageviews, privacy, statistics, stats, visits, web stats, widget
 * Requires at least: 4.7
 * Tested up to:      6.1

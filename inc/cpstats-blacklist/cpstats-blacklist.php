@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Constants.
 define( 'CPSTATSBLACKLIST_FILE', __FILE__ );
-define( 'CPSTATSBLACKLIST_DIR', dirname( __FILE__ ) . '/inc/cpstats-blacklist' );
+define( 'CPSTATSBLACKLIST_DIR', dirname( __FILE__ ) );
 define( 'CPSTATSBLACKLIST_BASE', plugin_basename( __FILE__ ) );
 
 

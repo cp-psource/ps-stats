@@ -7,7 +7,7 @@
  * Author URI:  https://n3rds.work
  * Plugin URI:  https://cp-psource.github.io/cp-stats/
  * License:     GPLv3 or later
- * Version:     1.8.4
+ * Version:     1.8.5
  * Domain Path: languages
  *
  * @package ClassicPress
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'CPSTATS_FILE', __FILE__ );
 define( 'CPSTATS_DIR', dirname( __FILE__ ) );
 define( 'CPSTATS_BASE', plugin_basename( __FILE__ ) );
-define( 'CPSTATS_VERSION', '1.8.4' );
+define( 'CPSTATS_VERSION', '1.8.5' );
 
 
 /* Hooks */

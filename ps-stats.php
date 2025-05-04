@@ -7,7 +7,7 @@
  * Author URI:  https://n3rds.work
  * Plugin URI:  https://cp-psource.github.io/ps-stats/
  * License:     GPLv3 or later
- * Version:     1.8.5
+ * Version:     1.8.6
  * Domain Path: languages
  *
  * @package WordPress
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'CPSTATS_FILE', __FILE__ );
 define( 'CPSTATS_DIR', dirname( __FILE__ ) );
 define( 'CPSTATS_BASE', plugin_basename( __FILE__ ) );
-define( 'CPSTATS_VERSION', '1.8.5' );
+define( 'CPSTATS_VERSION', '1.8.6' );
 
 
 /* Hooks */

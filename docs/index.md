@@ -1,12 +1,14 @@
-=== PS Stats ===
-* Contributors:      DerN3rd
-* Tags:              analytics, dashboard, pageviews, privacy, statistics, stats, visits, web stats, widget
-* Requires at least: 4.7
-* Tested up to:      6.8.1
-* Requires PHP:      5.2
-* Stable tag:        1.8.5
-* License:           GPLv3 or later
-* License URI:       https://www.gnu.org/licenses/gpl-3.0.html
+---
+layout: psource-theme
+title: "PS Stats"
+---
+
+<h2 align="center" style="color:#38c2bb;">📚 PS Stats</h2>
+
+<div class="menu">
+  <a href="https://github.com/cp-psource/ps-stats/discussions" style="color:#38c2bb;">💬 Forum</a>
+  <a href="https://github.com/cp-psource/ps-stats/releases" style="color:#38c2bb;">📝 Download</a>
+</div>
 
 Besucherstatistik für WordPress mit Fokus auf Datenschutz, Transparenz und Übersichtlichkeit. Perfekt als Widget in Deinem WordPress Dashboard.
 
@@ -36,7 +38,7 @@ Die Statistiken für das Dashboard-Widget werden für vier Minuten zwischengespe
 Da alle statistischen Werte in der lokalen WordPress-Datenbank gesammelt und verwaltet werden, ist mit einer Erhöhung des Datenbankvolumens zu rechnen (insbesondere wenn Sie den Zeitraum der Datenspeicherung erhöhen).
 
 ### JavaScript-Tracking für Caching-Kompatibilität ###
-Für die Kompatibilität mit Caching-Plugins wie [Cachify](http://cachify.de) bietet *PS Stats* ein optional zuschaltbares Tracking via JavaScript. Diese Funktion ermöglicht eine zuverlässige Zählung der gecachten Blogseiten.
+Für die Kompatibilität mit Caching-Plugins wie [Cachify](http://cachify.de) bietet *PSStats* ein optional zuschaltbares Tracking via JavaScript. Diese Funktion ermöglicht eine zuverlässige Zählung der gecachten Blogseiten.
 
 Damit dies korrekt funktioniert, muss das aktive Theme `wp_footer()` aufrufen, typischerweise in einer Datei namens `footer.php`.
 
@@ -45,5 +47,3 @@ Die Kommentar-Blacklist kann aktiviert werden, um das Tracking für Aufrufe zu �
 
 ### Unterstützung ###
 Wenn Du Probleme hast oder glaubst, einen Fehler gefunden zu haben (z.B. ein unerwartetes Verhalten), lass uns Bitte eine [Fehlermeldung] (https://github.com/cp-psource/ps-stats/issues) zukommen.
-
-

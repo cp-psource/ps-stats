@@ -1,6 +1,6 @@
 /* @group Front page */
 
-#cpstats_chart {
+#psstats_chart {
 	color: #a7aaad;
 	flex: 0 0 100%;
 	direction: rtl;
@@ -11,55 +11,55 @@
 	text-align: center;
 }
 
-#cpstats_chart_data {
+#psstats_chart_data {
 	display: none;
 }
 
-#cpstats_chart .ct-label.ct-vertical.ct-start {
+#psstats_chart .ct-label.ct-vertical.ct-start {
 	-webkit-justify-content: flex-start;
 	justify-content: flex-start;
 	text-align: left;
 	text-anchor: start;
 }
 
-#cpstats_chart .ct-line {
+#psstats_chart .ct-line {
 	stroke: #3582c4;
 	stroke-width: 2px;
 }
 
-#cpstats_chart .ct-point {
+#psstats_chart .ct-point {
 	fill: #fff;
 	stroke: #3582c4;
 	stroke-width: 1.5px;
 }
 
-#cpstats_chart .ct-area {
+#psstats_chart .ct-area {
 	fill: #3582c4;
 }
 
-.cpstats-chartist-tooltip {
+.psstats-chartist-tooltip {
 	border: 1px solid #000;
 	background-color: #fff;
 	border-radius: 0.2em;
 	padding: 0.1em 0.5em;
 }
 
-.cpstats-chartist-tooltip::before {
+.psstats-chartist-tooltip::before {
 	border-top-color: #0009;
 }
 
-.cpstats-chartist-tooltip .chartist-tooltip-meta {
+.psstats-chartist-tooltip .chartist-tooltip-meta {
 	color: #3582c4;
 }
 
-#cpstats_dashboard .postbox-title-action a,
-#cpstats_dashboard .settings-link a {
+#psstats_dashboard .postbox-title-action a,
+#psstats_dashboard .settings-link a {
 	display: block;
 	line-height: 20px;
 	text-decoration: none;
 }
 
-#cpstats_dashboard .inside {
+#psstats_dashboard .inside {
 	display: flex;
 	flex-wrap: wrap;
 	height: 1%;
@@ -69,44 +69,44 @@
 	position: relative;
 }
 
-#cpstats_dashboard.closed .inside {
+#psstats_dashboard.closed .inside {
 	display: none;
 }
 
-#cpstats_dashboard .table {
+#psstats_dashboard .table {
 	padding-bottom: 12px;
 }
 
-#cpstats_dashboard .table p.sub {
+#psstats_dashboard .table p.sub {
 	color: #646970;
 	margin: 0 0 -4px;
 }
 
-#cpstats_dashboard .table div {
+#psstats_dashboard .table div {
 	overflow: hidden;
 }
 
-#cpstats_dashboard .table.referrer,
-#cpstats_dashboard .table.target {
+#psstats_dashboard .table.referrer,
+#psstats_dashboard .table.target {
 	flex: 1 0 50%;
 }
 
-#cpstats_dashboard .table.total {
+#psstats_dashboard .table.total {
 	flex: 0 0 100%;
 }
 
-#cpstats_dashboard td {
+#psstats_dashboard td {
 	padding: 8px 0 0;
 	line-height: 1.4;
 }
 
-#cpstats_dashboard td.b {
+#psstats_dashboard td.b {
 	text-align: right;
 	padding-right: 4px;
 	color: #646970;
 }
 
-#cpstats_dashboard label {
+#psstats_dashboard label {
 	display: block;
 	margin-bottom: 1.1em !important;
 }
@@ -116,16 +116,16 @@
 
 /* @group Back stage */
 
-#cpstats_dashboard form {
+#psstats_dashboard form {
 	flex: 0 0 100%;
 	padding: 18px 0;
 }
 
-#cpstats_dashboard input[type="number"] {
+#psstats_dashboard input[type="number"] {
 	width: 100px;
 }
 
-#cpstats_dashboard .meta-links {
+#psstats_dashboard .meta-links {
 	float: right;
 	margin: 0;
 	line-height: 28px;

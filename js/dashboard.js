@@ -2,7 +2,7 @@
 	// Initialize.
 	var labels = [];
 	var data = [];
-	var cpstatsDataTable = jQuery( '#cpstats_chart_data' );
+	var psstatsDataTable = jQuery( '#psstats_chart_data' );
 	var maxValue;
 	var chartWidth;
 	var fullWidth = true;
@@ -10,16 +10,16 @@
 	var chart;
 
 	// Abort if no data is present.
-	if ( ! cpstatsDataTable.length ) {
+	if ( ! psstatsDataTable.length ) {
 		return;
 	}
 
 	// Collect data from hidden table.
-	jQuery( 'th', cpstatsDataTable ).each( function() {
+	jQuery( 'th', psstatsDataTable ).each( function() {
 		labels.push( jQuery( this ).text() );
 	} );
 
-	jQuery( 'td', cpstatsDataTable ).each( function() {
+	jQuery( 'td', psstatsDataTable ).each( function() {
 		data.push( jQuery( this ).text() );
 	} );
 
@@ -27,7 +27,7 @@
 	maxValue = Math.max.apply( Math, data );
 
 	// Adjust display according if there are too many values to display redable.
-	chartWidth = jQuery( '#cpstats_chart' ).width();
+	chartWidth = jQuery( '#psstats_chart' ).width();
 	if ( chartWidth < data.length * 4 ) {
 		// Make chart scrollable, if 2px points are overlapping.
 		fullWidth = false;
@@ -38,7 +38,7 @@
 	}
 
 	// Draw chart.
-	chart = new Chartist.Line( '#cpstats_chart', {
+	chart = new Chartist.Line( '#psstats_chart', {
 		labels: labels,
 		series: [
 			data,
@@ -71,7 +71,7 @@
 		plugins: [
 			Chartist.plugins.tooltip( {
 				appendToBody: true,
-				class: 'cpstats-chartist-tooltip',
+				class: 'psstats-chartist-tooltip',
 			} ),
 		],
 	} );
@@ -84,7 +84,7 @@
 				cx: [ d.x ],
 				cy: [ d.y ],
 				r: [ pointRadius ],
-				'ct:value': d.value.y + ' ' + ( d.value.y > 1 ? cpstats_translations.pageviews : cpstats_translations.pageview ),
+				'ct:value': d.value.y + ' ' + ( d.value.y > 1 ? psstats_translations.pageviews : psstats_translations.pageview ),
 				'ct:meta': labels[d.index],
 			}, 'ct-point' );
 			d.element.replace( circle );

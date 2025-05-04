@@ -1,6 +1,6 @@
 <?php
 /**
- * CPStats Filter
+ * PSStats Filter
  * Version:     1.6.2
  *
  */
@@ -17,31 +17,31 @@ define( 'CPSTATSBLACKLIST_BASE', plugin_basename( __FILE__ ) );
 
 
 // System Hooks.
-add_action( 'plugins_loaded', array( 'CPStatsBlacklist', 'init' ) );
+add_action( 'plugins_loaded', array( 'PSStatsBlacklist', 'init' ) );
 
-register_activation_hook( CPSTATSBLACKLIST_FILE, array( 'CPStatsBlacklist_System', 'install' ) );
+register_activation_hook( CPSTATSBLACKLIST_FILE, array( 'PSStatsBlacklist_System', 'install' ) );
 
-register_uninstall_hook( CPSTATSBLACKLIST_FILE, array( 'CPStatsBlacklist_System', 'uninstall' ) );
+register_uninstall_hook( CPSTATSBLACKLIST_FILE, array( 'PSStatsBlacklist_System', 'uninstall' ) );
 
 // Upgrade hook.
-register_activation_hook( CPSTATSBLACKLIST_FILE, array( 'CPStatsBlacklist_System', 'upgrade' ) );
+register_activation_hook( CPSTATSBLACKLIST_FILE, array( 'PSStatsBlacklist_System', 'upgrade' ) );
 
 // Autoload.
-spl_autoload_register( 'cpstats_blacklist_autoload' );
+spl_autoload_register( 'psstats_blacklist_autoload' );
 
 
 /**
- * Autoloader for CPStatsBlacklist classes.
+ * Autoloader for PSStatsBlacklist classes.
  *
  * @param string $class Name of the class to load.
  *
  * @since 1.0.0
  */
-function cpstats_blacklist_autoload( $class ) {
+function psstats_blacklist_autoload( $class ) {
 	$plugin_classes = array(
-		'CPStatsBlacklist',
-		'CPStatsBlacklist_Admin',
-		'CPStatsBlacklist_System',
+		'PSStatsBlacklist',
+		'PSStatsBlacklist_Admin',
+		'PSStatsBlacklist_System',
 	);
 
 	if ( in_array( $class, $plugin_classes, true ) ) {

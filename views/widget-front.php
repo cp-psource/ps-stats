@@ -1,29 +1,29 @@
 <?php
 /**
- * CPStats: Widget Frontend View
+ * PSStats: Widget Frontend View
  *
  * This file contains the viewmodel for the plugin's widget frontend.
  *
- * @package   CP-Stats
+ * @package   PS-Stats
  */
 
 // Quit if accessed outside WP context.
-class_exists( 'CPStats' ) || exit;
+class_exists( 'PSStats' ) || exit;
 
 // Get stats.
-$refresh = isset( $_POST['cpstats-fresh'] ) && check_admin_referer( 'cpstats-dashboard-refresh' );
-$stats = CPStats_Dashboard::get_stats( $refresh ); ?>
+$refresh = isset( $_POST['psstats-fresh'] ) && check_admin_referer( 'psstats-dashboard-refresh' );
+$stats = PSStats_Dashboard::get_stats( $refresh ); ?>
 
-	<div id="cpstats_chart">
+	<div id="psstats_chart">
 		<?php if ( empty( $stats['visits'] ) ) { ?>
 			<p>
-				<?php esc_html_e( 'No data available.', 'cpstats' ); ?>
+				<?php esc_html_e( 'No data available.', 'psstats' ); ?>
 			</p>
 		<?php } else { ?>
-			<table id="cpstats_chart_data">
+			<table id="psstats_chart_data">
 				<?php foreach ( (array) $stats['visits'] as $visit ) { ?>
 					<tr>
-						<th><?php echo esc_html( CPStats::parse_date( $visit['date'] ) ); ?></th>
+						<th><?php echo esc_html( PSStats::parse_date( $visit['date'] ) ); ?></th>
 						<td><?php echo (int) $visit['count']; ?></td>
 					</tr>
 				<?php } ?>
@@ -35,7 +35,7 @@ $stats = CPStats_Dashboard::get_stats( $refresh ); ?>
 <?php if ( ! empty( $stats['referrer'] ) ) { ?>
 	<div class="table referrer">
 		<p class="sub">
-			<?php esc_html_e( 'Top referers', 'cpstats' ); ?>
+			<?php esc_html_e( 'Top referers', 'psstats' ); ?>
 		</p>
 
 		<div>
@@ -60,7 +60,7 @@ $stats = CPStats_Dashboard::get_stats( $refresh ); ?>
 <?php if ( ! empty( $stats['target'] ) ) { ?>
 	<div class="table target">
 		<p class="sub">
-			<?php esc_html_e( 'Top targets', 'cpstats' ); ?>
+			<?php esc_html_e( 'Top targets', 'psstats' ); ?>
 		</p>
 
 		<div>
@@ -85,7 +85,7 @@ $stats = CPStats_Dashboard::get_stats( $refresh ); ?>
 <?php if ( ! empty( $stats['visit_totals'] ) ) { ?>
 	<div class="table total">
 		<p class="sub">
-			<?php esc_html_e( 'Totals', 'cpstats' ); ?>
+			<?php esc_html_e( 'Totals', 'psstats' ); ?>
 		</p>
 		<div>
 			<table>
@@ -94,7 +94,7 @@ $stats = CPStats_Dashboard::get_stats( $refresh ); ?>
 						<?php echo (int) $stats['visit_totals']['today']; ?>
 					</td>
 					<td class="t">
-						<?php esc_html_e( 'today', 'cpstats' ); ?>
+						<?php esc_html_e( 'today', 'psstats' ); ?>
 					</td>
 				</tr>
 				<tr>
@@ -102,8 +102,8 @@ $stats = CPStats_Dashboard::get_stats( $refresh ); ?>
 						<?php echo (int) $stats['visit_totals']['since_beginning']['count']; ?>
 					</td>
 					<td class="t">
-						<?php esc_html_e( 'since', 'cpstats' ); ?>
-						<?php echo esc_html( CPStats::parse_date( $stats['visit_totals']['since_beginning']['date'] ) ); ?>
+						<?php esc_html_e( 'since', 'psstats' ); ?>
+						<?php echo esc_html( PSStats::parse_date( $stats['visit_totals']['since_beginning']['date'] ) ); ?>
 					</td>
 				</tr>
 			</table>
@@ -112,6 +112,6 @@ $stats = CPStats_Dashboard::get_stats( $refresh ); ?>
 <?php } ?>
 
 <form method="post">
-	<?php wp_nonce_field( 'cpstats-dashboard-refresh' ); ?>
-	<button type="submit" class="button button-primary" name="cpstats-fresh"><?php esc_html_e( 'Refresh', 'cpstats' ); ?></button>
+	<?php wp_nonce_field( 'psstats-dashboard-refresh' ); ?>
+	<button type="submit" class="button button-primary" name="psstats-fresh"><?php esc_html_e( 'Refresh', 'psstats' ); ?></button>
 </form>

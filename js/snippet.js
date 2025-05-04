@@ -1,14 +1,14 @@
 ( function() {
-	var cpstatsReq;
+	var psstatsReq;
 	try {
-		cpstatsReq = new XMLHttpRequest();
-		cpstatsReq.open( 'POST', cpstats_ajax.url, true );
-		cpstatsReq.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded;' );
-		cpstatsReq.send(
-			'_ajax_nonce=' + cpstats_ajax.nonce +
-			'&action=cpstats_track' +
-			'&cpstats_referrer=' + encodeURIComponent( document.referrer ) +
-			'&cpstats_target=' + encodeURIComponent( location.pathname + location.search )
+		psstatsReq = new XMLHttpRequest();
+		psstatsReq.open( 'POST', psstats_ajax.url, true );
+		psstatsReq.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded;' );
+		psstatsReq.send(
+			'_ajax_nonce=' + psstats_ajax.nonce +
+			'&action=psstats_track' +
+			'&psstats_referrer=' + encodeURIComponent( document.referrer ) +
+			'&psstats_target=' + encodeURIComponent( location.pathname + location.search )
 		);
 	} catch ( e ) {
 	}
